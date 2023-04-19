@@ -1,0 +1,81 @@
+<div class="general-white-front top-flat">
+    <div class="login-wrapper">
+      <div class="login-content">
+        <div class="fc-logo"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/fc-mark.svg" loading="lazy" alt=""></div>
+        <h1 class="black-text no-margin-b">SIGN IN</h1>
+        <p class="black-text larger-spacing">Don&#x27;t Have An Account? <a href="/account/register" class="bright-blue-black-link">Create One Here.</a>
+        </p>
+        <div class="login-form-block w-form">
+
+          <div class="form-block-forgot-pw hidden">
+
+            {% form 'recover_customer_password' %}
+               <div class="hero-heading-wrapper-login">
+                 <h2 class="section-heading-sm">Reset Your Passord</h2>
+               </div><input type="email" class="form-input-login w-input" maxlength="256" name="email"  placeholder="Email" id="RecoverEmail" required="">
+               <div class="form-btn-wrapper-login full">
+                <input type="submit" value="Submit" data-wait="Please wait..." class="general-btn dark-with-w-text _100 w-button">
+              </div>
+               <div class="form-bottom-wrapper-login">
+                 <div class="form-bottom-link-wrapper-login">
+                   <a href="#" id="hide-pw" class="black-text no-margin-b link" data-ix="hide-pw-form">
+                     <div>Cancel</div>
+                   </a>
+                 </div>
+               </div>
+             {% endform %}
+       
+       
+          </div>
+
+          <div class="customer-form">
+          
+          {% form 'customer_login' %}
+
+            {{ form.errors | default_errors }}
+            <input type="email" class="form-input-login w-input" maxlength="256" name="customer[email]" placeholder="Email" id="CustomerEmail" required=""><input type="password" class="form-input-login w-input" maxlength="256" name="customer[password]" placeholder="Password" id="CustomerPassword" required="">
+            
+            <div class="form-btn-wrapper-login full"><input type="submit" value="Sign In" data-wait="Please wait..." class="general-btn dark-with-w-text _100 w-button"></div>
+            <div class="form-bottom-wrapper-login">
+              <div class="form-bottom-link-wrapper-login">
+                <a href="#" id="forgot-pw" class="black-text no-margin-b link" data-ix="show-pw-form">
+                  <div>Forgot Password?</div>
+                </a>
+              </div>
+            </div>
+          {% endform %}
+
+        </div>
+
+
+
+        </div>
+
+
+
+
+        <div class="login-img-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle3-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle3-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle3-min-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle3-min-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle3-min.png 1600w" sizes="100vw" alt="" class="login-img"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+        $("#forgot-pw").on('click', 
+        function() {
+            
+          $(".form-block-forgot-pw").removeClass('hidden');
+          $(".customer-form").addClass('hidden');
+          
+
+        });
+        $("#hide-pw").on('click', 
+        function() {
+            
+          $(".form-block-forgot-pw").addClass('hidden');
+          $(".customer-form").removeClass('hidden');
+
+        });
+    });
+
+      </script>

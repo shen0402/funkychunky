@@ -1,0 +1,104 @@
+{% layout none %}{% paginate collection.products by 50 %}{
+"next_url": "{{ paginate.next.url }}",
+"default_sort": "{{ collection.sort_by | default: collection.default_sort_by }}",
+"sort_options":[{%- for option in collection.sort_options -%}{
+  "name": "{{ option.name }}",
+  "value": "{{ option.value }}"
+}{% if forloop.last %}{% else %},{% endif %}{%- endfor -%}],
+"sort_by": "{{ collection.sort_by }}",
+"filters": [{%- for filter in collection.filters -%}{
+    "type": "{{ filter.type }}",
+    "label": "{{ filter.label }}",
+    "param_name": "{{ filter.param_name }}",
+    "active_values": [{%- for filter_value in filter.active_values -%}{
+      "label": "{{ filter_value.label }}",
+      "value": "{{ filter_value.value }}"
+    }{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
+    {%- case filter.type -%}{%- when 'boolean' or 'list' -%}"values":[{%- for filter_value in filter.values -%}{
+        "param_name": "{{ filter_value.param_name }}",
+        "value": "{{ filter_value.value | escape }}",
+        "active": "{{ filter_value.active }}",
+        "count": "{{ filter_value.count }}",
+        "label": "{{ filter_value.label | escape }}"
+    }{% if forloop.last %}{% else %},{% endif %}{% endfor %}]{%- when 'price_range' -%}"min_value": {
+      "param_name": "{{ filter.min_value.param_name }}",
+      "value": "{{ filter.min_value.value }}"
+    },
+    "max_value": {
+      "param_name": "{{ filter.max_value.param_name }}",
+      "value": "{{ filter.max_value.value }}"
+    },
+    "range_max": "{{ filter.range_max}}"{%- endcase -%}
+  }{% if forloop.last %}{% else %},{% endif %}{%- endfor -%}],
+  "products": [{% for product in collection.products %}{
+    "id": {{ product.id | default: "" }},
+    "available": {{ product.available | default: true }},
+    "compare_at_price_max": "{{ product.compare_at_price_max | money }}",
+    "compare_at_price_min": "{{ product.compare_at_price_min | money }}",
+    "compare_at_price_varies": {{ product.compare_at_price_varies }},
+    "featured_image": "{{ product.featured_image | img_url: '400x' }}",
+    "first_available_variant": {% if product.first_available_variant %}{
+      "id": {{ product.first_available_variant.id | default: "" }},
+      "available": {{ product.first_available_variant.available | default: true }},
+      "barcode": "{{ product.first_available_variant.barcode | replace: "\", "\\\" | strip_newlines | escape }}",
+      "compare_at_price": "{{ firstproduct.first_available_variant_available_variant.compare_at_price }}",
+      "grams": {{ product.first_available_variant.grams | default: 0 }},
+      "inventory_management": "{{ product.first_available_variant.inventory_management }}",
+      "inventory_policy": "{{ product.first_available_variant.inventory_policy }}",
+      "inventory_quantity": {{ product.first_available_variant.inventory_quantity }},
+      "option1": "{{ product.first_available_variant.option1 | replace: "\", "\\\" | strip_newlines | escape }}",
+      "option2": "{{ product.first_available_variant.option2 | replace: "\", "\\\" | strip_newlines | escape }}",
+      "option3": "{{ product.first_available_variant.option3 | replace: "\", "\\\" | strip_newlines | escape }}",
+      "options": {{ product.first_available_variant.options | json }},
+      "price": "{{ product.first_available_variant.price }}",
+      "requires_shipping": {{ product.first_available_variant.requires_shipping | default: true }},
+      "sku": "{{ product.first_available_variant.sku | replace: "\", "\\\" | strip_newlines | escape }}",
+      "taxable": {{ product.first_available_variant.taxable }},
+      "title": "{{ product.first_available_variant.title | replace: "\", "\\\" | strip_newlines | escape }}",
+      "weight": {{ product.first_available_variant.weight }},
+      "weight_unit": "{{ product.first_available_variant.weight_unit }}"
+    }{% else %}{{ null | json }}{% endif %},
+    "handle": "{{ product.handle }}",
+    "images": {{ product.images | json }},
+    "image": {{ product.image | json }},
+    "options": [{%- for option in product.options_with_values -%}{
+      "name": "{{ option.name | replace: "\", "\\\" | strip_newlines | escape }}",
+      "position": {{ option.position }},
+      "values": {{ option.values | json }}
+    }{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
+    "price": "{{ product.price | money }}",
+    "price_max": "{{ product.price_max | money }}",
+    "price_min": "{{ product.price_min | money }}",
+    "price_varies": {{ product.price_varies }},
+    "selected_or_first_available_variant": {{ product.selected_or_first_available_variant | json }},
+    "tags": {{ product.tags | json }},
+    "template_suffix": "{{ product.template_suffix }}",
+    "title": "{{ product.title | replace: "\", "\\\" | strip_newlines | escape }}",
+    "type": "{{ product.type }}",
+    "url": "{{ product.url }}",
+    "variants": [{%- for variant in product.variants -%}{
+      "id": {{ variant.id | default: "" }},
+      "available": {{ variant.available }},
+      "barcode": "{{ variant.barcode | replace: "\", "\\\" | strip_newlines | escape }}",
+      "compare_at_price": "{{ variant.compare_at_price }}",
+      "grams": {{ variant.grams | default: 0 }},
+      "inventory_management": "{{ variant.inventory_management }}",
+      "inventory_policy": "{{ variant.inventory_policy }}",
+      "inventory_quantity": {{ variant.inventory_quantity }},
+      "option1": "{{ variant.option1 | replace: "\", "\\\" | strip_newlines | escape }}",
+      "option2": "{{ variant.option2 | replace: "\", "\\\" | strip_newlines | escape }}",
+      "option3": "{{ variant.option3 | replace: "\", "\\\" | strip_newlines | escape }}",
+      "options": {{ variant.options | json }},
+      "price": "{{ variant.price }}",
+      "requires_shipping": {{ variant.requires_shipping | default: true }},
+      "sku": "{{ variant.sku  | replace: "\", "\\\" | strip_newlines | escape }}",
+      "taxable": {{ variant.taxable }},
+      "title": "{{ variant.title  | replace: "\", "\\\" | strip_newlines | escape }}",
+      "weight": {{ variant.weight }},
+      "weight_unit": "{{ variant.weight_unit }}"
+    }{% if forloop.last %}{% else %},{% endif %}{% endfor %}],
+    "vendor": "{{ product.vendor }}"
+    }{% if forloop.last %}{% else %},{% endif %}{% endfor %}
+  ]
+}
+{% endpaginate %}

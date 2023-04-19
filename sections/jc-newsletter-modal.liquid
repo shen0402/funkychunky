@@ -1,0 +1,104 @@
+<div class="form-modal-wrapper">
+  <div class="form-modal-content-wrapper">
+    <div class="form-modal-logo-wrapper">
+      <img src="//cdn.shopify.com/s/files/1/0672/8799/files/TSG-Logo-White-min.png" class="form-modal-logo-img" alt="The Sporting Gent">
+    </div>
+    <div class="form-modal-inner">
+
+      <div class="form-modal-top-wrapper">
+        <div class="form-modal-top-heading">{{section.settings.desktop_text_1}}</div>
+        <div class="form-modal-top-sub-heading">{{section.settings.desktop_text_2}}</div>
+        <div class="form-modal-close-btn form-modal-close-btn-desktop"><img src="//cdn.shopify.com/s/files/1/0672/8799/files/close-white.png" loading="lazy" alt="Close" class="form-modal-close-btn-img"></div>
+      </div>
+
+      <div class="form-modal-bottom-wrapper">
+        <div class="form-modal-bottom-heading">{{section.settings.heading_text}}</div>
+        <div class="form-modal-bottom-sub-heading">{{section.settings.sub_heading_text}}</div>
+        <div class="form-modal-bottom-heading form-modal-bottom-heading-alt">{{section.settings.bottom_heading_text}}</div>
+        <div class="form-modal-embed-wrapper">
+          <div class="form-modal-embed w-embed">
+            <div class="klaviyo-form-SWcdPA"></div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div class="form-modal-close-btn form-modal-close-btn-mobile"><img src="//cdn.shopify.com/s/files/1/0672/8799/files/close-white.png" loading="lazy" alt="Close" class="form-modal-close-btn-img"></div>
+  <div class="form-modal-mobile-overlay"></div>
+</div>
+
+<style type="text/css">
+
+  .form-modal-embed form {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
+  .form-modal-embed img {
+    margin-bottom: -1px !important;
+  }
+
+  @media screen and (max-width: 479px) { 
+
+      .form-modal-wrapper {
+          padding-right: 0px;
+          padding-left: 0px;
+          background-color: #202530;
+          {% if section.settings.bg_image %}
+          background-image: url({{ section.settings.bg_image | img_url: '1600x' }});
+          {% endif %}
+          background-position: 50% 50%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          padding-top: 50px;
+        }
+
+  }
+  
+</style>
+
+{% schema %}
+  {
+    "name": "Newsletter Pop-Up" ,
+    "settings": [
+        {
+           "type": "text",
+           "id": "desktop_text_1",
+           "default": "First Time Order?",
+           "label": "Desktop Text 1"
+        },
+        {
+           "type": "text",
+           "id": "desktop_text_2",
+           "default": "How About 15% Off?",
+           "label": "Desktop Text 2"
+        },
+        {
+           "type": "text",
+           "id": "heading_text",
+           "default": "SIGN UP TO GET YOUR CODE",
+           "label": "Heading Text"
+        },
+        {
+           "type": "text",
+           "id": "sub_heading_text",
+           "default": "15% OFF",
+           "label": "Secondary Heading Text"
+        },
+        {
+           "type": "text",
+           "id": "bottom_heading_text",
+           "default": "YOUR FIRST ORDER",
+           "label": "Third Heading Text"
+        },
+        {
+           "type": "image_picker",
+           "id": "bg_image",
+           "label": "Mobile Background Image"
+        }
+    ]
+  }
+{% endschema %}

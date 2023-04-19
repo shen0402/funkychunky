@@ -1,0 +1,126 @@
+{% section 'top-section-hs' %}
+
+
+
+
+  <div class="white-section">
+    <div class="general-white-front top-flat center margin-b-2 hs">
+      <div class="general-sub-hero-heading-wrapper">
+        <h5 class="bright-blue-text">just keep snackin&#x27;<span class="break-line"></span></h5>
+        <h1 class="black-text">our best sellers<span class="break-line"></span></h1>
+      </div>
+
+      <div class="recomended-product-wrapper">
+        <div class="recomended-product-inner">
+         
+
+
+
+          {% for product in collections["best-sellers-howard-stern"].products %}
+          
+
+              {%- assign iteration_number = forloop.index -%}
+              {% assign current_variant = product.selected_or_first_available_variant %}
+
+              {%unless iteration_number > 3 %}
+              
+                  <div class="shop-flex-col-item center">
+                    <a href="{{ product.url }}" class="shop-img-wrapper w-inline-block">
+                      <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" loading="lazy"  sizes="(max-width: 479px) 89.765625px, (max-width: 767px) 160px, 200px" class="img-shop"></a>
+                    <div id="w-node-_2c453dd0-c9ca-8595-de3c-3a5b7b5c5cc5-dd266cfc" class="shop-name-inner">
+                      <h2 class="black-text no-margin-b no-margin-t">
+                        <a href="{{ product.url }}" class="black-bright-blue-link">{{product.title}}</a><span class="break-line"></span>
+                      </h2>
+
+                    {% if product.metafields.product_info.collection_description %}
+                      <p class="black-text smaller">{{ product.metafields.product_info.collection_description }}</p>
+                    {% endif %}
+                        
+                    </div>
+
+                    <p class="black-text center">{{product.price | money }}</p>
+
+                  </div>
+
+                  {%endunless%}
+
+                  
+
+          {% endfor %}
+        </div>
+      </div>
+
+
+      <a href="https://funkychunky.com/collections/best-selling-products" class="general-btn dark-with-w-text margin-t-larger w-button">Shop All Best Sellers</a>
+    </div>
+  </div>
+
+
+
+
+  <div class="black-back-section center bottom-rounded-down">
+    <h1>delicious categories</h1>
+    <div class="categories-grid">
+      <div id="w-node-_7c729f00-ec54-7bd0-28df-331c2f6f9541-72a218a1" class="general-white-front no-margin-t">
+        <div class="categories-grid-inner">
+          <div id="w-node-_2a65cc28-1ff2-7769-d0b4-d9757bee6f57-72a218a1" class="categories-img-classic">
+            <div class="categories-class-img-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-classics-min.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-classics-min-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-classics-min-p-800.jpg 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-classics-min-p-1080.jpg 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-classics-min-p-1600.jpg 1600w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-classics-min.jpg 1600w" sizes="(max-width: 479px) 84vw, (max-width: 767px) 82vw, (max-width: 991px) 124px, 26vw" alt="" class="category-img"></div>
+            <a href="https://funkychunky.com/collections/flavors" class="general-btn dark-with-w-text change-order w-button">Shop All Classic Flavors</a>
+          </div>
+          <div id="w-node-c952f84e-071f-bb22-e77e-995a9d77b4ac-72a218a1" class="classic-category-text-wrapper">
+            <h5 class="bright-blue-text">Classic flavors<span class="break-line"></span></h5>
+            <h1 class="black-text">WANT A SNACK WITH SOME UMPH?!</h1>
+            <p class="black-text">How could your tastebuds say no? Each batch is hand-drizzled and mixed to give every bite a sweet and salty treat for your mouth. Don&#x27;t miss our Chocolate covered pretzels either, a favorite of our customers for decades.</p>
+          </div>
+        </div>
+      </div>
+      <div id="w-node-b41510fb-ae90-6608-7e77-c911ea5b1300-72a218a1" class="general-white-front no-margin-t">
+        <div class="categories-grid-inner vertical">
+          <div id="w-node-b41510fb-ae90-6608-7e77-c911ea5b1302-72a218a1" class="categories-img-classic">
+            <div class="categories-class-img-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-cafe-min.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-cafe-min-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-cafe-min-p-800.jpg 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-cafe-min-p-1080.jpg 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-cafe-min-p-1600.jpg 1600w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-cafe-min.jpg 1600w" sizes="(max-width: 479px) 84vw, (max-width: 767px) 82vw, (max-width: 991px) 38vw, 44vw" alt="" class="category-img"></div>
+          </div>
+          <div id="w-node-b41510fb-ae90-6608-7e77-c911ea5b1307-72a218a1" class="classic-category-text-wrapper center">
+            <h5 class="brown-text">Café flavors<span class="break-line"></span></h5>
+            <h1 class="black-text">need a pick-me-up?</h1>
+            <p class="black-text">Our Café infused flavors do the trick! Need a little caffeine in your life and the chocolate not cutting it? Created because frankly we were tired and needed these in our lives.</p>
+            <a href="https://funkychunky.com/collections/funky-cafe" class="general-btn dark-with-w-text auto-margin-t w-button">Shop All Café Flavors</a>
+          </div>
+        </div>
+      </div>
+      <div id="w-node-_4363874e-c916-63b4-3dfb-96653feb4135-72a218a1" class="general-white-front no-margin-t">
+        <div class="categories-grid-inner vertical">
+          <div id="w-node-_4363874e-c916-63b4-3dfb-96653feb4137-72a218a1" class="categories-img-classic">
+            <div class="categories-class-img-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-gifting-min.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-gifting-min-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-gifting-min-p-800.jpg 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-gifting-min-p-1080.jpg 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-gifting-min.jpg 1200w" sizes="(max-width: 479px) 84vw, (max-width: 767px) 82vw, (max-width: 991px) 38vw, 44vw" alt="" class="category-img larger"></div>
+          </div>
+          <div id="w-node-_4363874e-c916-63b4-3dfb-96653feb413c-72a218a1" class="classic-category-text-wrapper center">
+            <h5 class="pink-text">gifts for any occasion<span class="break-line"></span></h5>
+            <h1 class="black-text">GIVE AS A GIFT!</h1>
+            <p class="black-text">If you need a great gift, look no further! We have gift options for every occasion, not to mention, it&#x27;s much better than getting a pair of socks.</p>
+            <a href="https://funkychunky.com/collections/popular-gifts" class="general-btn dark-with-w-text auto-margin-t w-button">Shop Our Gift Giving Options</a>
+          </div>
+        </div>
+      </div>
+      <div id="w-node-d0f47c2f-0cb9-d870-890b-2c0ea672444c-72a218a1" class="general-white-front no-margin-t">
+        <div class="categories-grid-inner bottom">
+          <div id="w-node-d0f47c2f-0cb9-d870-890b-2c0ea6724453-72a218a1" class="classic-category-text-wrapper center fullwidth">
+            <h5 class="green-text">send an e-gift<span class="break-line"></span></h5>
+            <h1 class="black-text">keep things simple</h1>
+            <p class="black-text _90wid">When there&#x27;s so many options, it can be too hard to choose! Give an E-Gift instead and leave the hard decisions to someone else ;)</p>
+            <a href="https://funkychunky.com/a/gc/gift-card/" class="general-btn dark-with-w-text wider w-button">Send An E-Gift</a>
+          </div>
+          <div id="w-node-d0f47c2f-0cb9-d870-890b-2c0ea672444e-72a218a1" class="categories-img-classic">
+            <div class="categories-class-img-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-egift-min.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-egift-min-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-egift-min-p-800.jpg 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-egift-min-p-1080.jpg 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-egift-min-p-1600.jpg 1600w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/collection-egift-min.jpg 1600w" sizes="(max-width: 479px) 84vw, (max-width: 767px) 82vw, (max-width: 991px) 83.953125px, 25vw" alt="" class="category-img"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="home-cta-section">
+    <div class="home-cta-wrapper">
+      <div class="home-cta-content-wrapper">
+        <h1>WE MAKE CORPORATE GIFTING EASY.</h1>
+        <p>When you want to make a lasting impression and show clients your appreciation, turn to the corporate-gifting experts at Funky Chunky.</p>
+        <a href="https://funkychunkygifts.com/" class="general-btn w-button">Shop Corporate Gifting</a>
+      </div>
+    </div>
+  </div>

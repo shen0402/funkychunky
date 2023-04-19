@@ -1,0 +1,21 @@
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+<script>
+    $(document).ready(function() {
+        $(".filter-dropdown-option").on('click', 
+        function() {
+            
+          if ($(this).siblings(".filter-options").hasClass('hide')==true)
+          {
+            $(this).siblings(".filter-options").removeClass("hide");
+            $(this).children(".expand-icon-wrapper").addClass("rotate");
+            
+          }
+          else
+          $(this).siblings(".filter-options").addClass("hide");
+          $(this).children(".expand-icon-wrapper").removeClass("rotate");
+        });
+    });
+
+      </script>

@@ -1,0 +1,988 @@
+
+
+<div class="jc-product-page-wrapper" itemscope itemtype="http://schema.org/Product" id="ProductSection--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="product-template"  data-enable-history-state="true" >
+
+	<meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+	<meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
+	{% assign main_product_id = product.id  %}
+	{% assign current_variant = product.selected_or_first_available_variant %}
+	{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+  {% assign current_variant_img = current_variant.image | img_url: '800x' %}
+
+	{% assign variantDescription = current_variant.metafields.variantDescription %}
+	{% assign key = 'description' %}
+
+	{% assign variantDirections = current_variant.metafields.variantDirections %}
+	{% assign key = 'directions' %}
+
+	{% assign variantSafety = current_variant.metafields.variantSafety %}
+	{% assign key = 'safety' %}
+
+	{% assign variantIngredients = current_variant.metafields.variantIngredients %}
+	{% assign key = 'ingredients' %}
+
+	{% assign subHeading = current_variant.metafields.subHeading %}
+	{% assign key = 'heading' %}
+
+	{% assign labResults = product.metafields.labResults %}
+	{% assign key = 'url' %}
+
+	{% assign productVideo = product.metafields.productVideo %}
+	{% assign key = 'videoId' %}
+
+	{% assign productDirections = product.metafields.productDirections %}
+	{% assign key = 'directions' %}
+
+	{% assign productIngredients = product.metafields.productIngredients %}
+	{% assign key = 'ingredients' %}
+
+	{% assign productSafetyLabTest = product.metafields.productSafetyLabTest %}
+	{% assign key = 'safetyLabTest' %}
+
+	{% assign broad_spectrum = false %}
+
+	{% assign current_variant = product.selected_or_first_available_variant %}
+
+  {% assign jc_is_gift_card = false %}
+
+  {% if product.type == 'Gift Card' %}
+    {% assign jc_is_gift_card = true %}
+  {% endif %}
+
+	{% assign productDetails = product.metafields.productDetails %}
+	{% assign key = 'default' %}
+	{% assign productDetails = product.metafields.productDetails %}
+	{% assign key = 'details2' %}
+	{% assign productDetails = product.metafields.productDetails %}
+	{% assign key = 'details3' %}
+
+
+
+	{% if current_variant.available %}
+			{% assign is_available = true %}
+		{% else %}
+			{% assign is_available = false %}
+	{% endif %}
+
+  
+{% if variant.title %}
+{%- assign compare_at_price = variant.compare_at_price -%}
+{%- assign price = variant.price -%}
+{%- assign available = variant.available -%}
+{% else %}
+{%- assign compare_at_price = 1999 -%}
+{%- assign price = 1999 -%}
+{%- assign available = true -%}
+{% endif %}
+
+{%- assign money_price = price | money -%}
+{%for collections in product.collections %}
+  {%unless forloop.index > 3 %}
+    {% assign collection_handle = collections | map: 'handle' %}
+    {% assign collection_url = collections.url %}
+  {%endunless%}
+{%endfor%}
+{% assign collection_handles = product.collections | map: 'handle' %}
+
+      
+{% if product.id == 1537893433401 %}
+<style>
+  .tabs-menu-2::-webkit-scrollbar-thumb{
+    background-color: #f3c300;
+  }
+</style>
+{% endif %}
+{% if product.id == 1537801388089 %}
+<style>
+  .tabs-menu-2::-webkit-scrollbar-thumb{
+    background-color: #70d44b;
+  }
+</style>
+{% endif %}
+{% if product.id == 1537790410809 %}
+<style>
+  .tabs-menu-2::-webkit-scrollbar-thumb{
+    background-color: #c59;
+  }
+</style>
+{% endif %}
+{% if product.id == 1537903099961 %}
+<style>
+  .tabs-menu-2::-webkit-scrollbar-thumb{
+    background-color: #ae841f;
+  }
+</style>
+{% endif %}
+
+</div> <!-- jc-product-page-wrapper -->
+
+
+
+{% if product.tags contains "Prime" %}
+  <div class="prime-hero-container">
+
+    <div class="prime-inner-content">
+      <div class="prime-col _25 desktop">
+        <img class="buy-with-prime-circle" src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/icon-BuyWithPrime.png?v=1680802983" alt="Buy With Prime">
+      </div>
+
+      <div class="prime-col _50">
+        <h1>Get Your Funky Chunky Products with Buy With Prime's fast, free shipping!</h1>
+
+        <div class="number-bullet-container">
+          <div class="number-bullet">1</div>
+          <p>Click the Buy with Prime button</p>
+        </div>
+
+        <div class="number-bullet-container">
+          <div class="number-bullet">2</div>
+          <p>Complete your purchase through your <br>Prime account!</p>
+        </div>
+
+        <p class="disclaimer-text">*On-site discounts are not eligible for <strong>BuyWithPrime</strong> purchases.</p>
+
+      </div>
+
+      <div class="prime-iamges-wrapper">
+        <div class="prime-col _25 mobile">
+          <img class="buy-with-prime-circle" src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/icon-BuyWithPrime.png?v=1680802983" alt="Buy With Prime">
+        </div>
+        
+        <div class="">
+          <img class="prime-right-photo" src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/FC_1301_Tasting-Kit_NEWPKG.png?v=1681147064" alt="buy with prime photo">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .product-main-section{
+      margin-top: 20px;
+    }
+  </style>
+{% endif %}
+
+  <div class="product-main-section">
+
+
+
+    <div class="breadcrumb-wrapper-product">
+
+      {% if jc_is_gift_card == true %}
+        <a href="/products/the-sporting-gent-gift-card" class="breadcrumb-link-product w-inline-block">
+          <p class="black-text no-margin-b">Gift Card</p>
+        </a>
+      {% else %}
+
+      {% comment %}
+         370539459 - /all ? 
+         163034857561 - recommended products 
+         162813182041 - Best sellers
+         162889433177 - TSG Apparel
+      {% endcomment %}
+      {% comment %}{% endcomment %}
+
+      
+      {% unless product.tags contains 'Prime' %}
+      <div class="breadcrumb-content-block-product">
+        <a href="/collections/all" class="breadcrumb-link-product w-inline-block">
+          <p class="black-text no-margin-b">Shop All<span class="sr-only"> products</span></p>
+        </a>
+      </div>
+      
+      {% for collection in product.collections %}
+        
+        {% assign jc_breadcrumb_collection = collection.metafields.collectionBreadcrumb.collection.value %}
+        
+        {% if jc_breadcrumb_collection == true %}
+          
+          {% comment %}
+            {% assign macro_collection = collection.metafields.macroCollection.collection %}
+          {% endcomment %}
+          
+          <p class="black-text">     /     </p>
+          <div class="breadcrumb-content-block-product">
+            <a href="{{collection.url}}" class="breadcrumb-link-product w-inline-block">
+              
+              <p class="black-text no-margin-b">{{collection.title }}</p>
+            </a>
+          </div>
+
+          {% endif %}
+        {% endfor %}
+      {% endunless %}
+        
+        {% for collection in product.collections %}
+
+        {% assign macro_collection = collection.metafields.macroCollection.collection %}
+        {% assign jc_breadcrumb_collection = collection.metafields.collectionBreadcrumb.collection %}
+
+          {% if macro_collection == 1 and jc_breadcrumb_collection != 1 %}
+
+          <div class="breadcrumb-content-block-product">
+            
+            <a href="{{collection.url}}" class="breadcrumb-link-product w-inline-block">
+              <p class="black-text no-margin-b">{{collection.title}}</p>
+            </a>
+
+          </div>
+            {%unless forloop.index == 4 %}  
+              <p class="black-text">     /     </p>  
+            {%endunless%} 
+          {% endif %}
+        {% endfor %}
+
+      {% endif %}
+
+    </div>
+
+    
+
+
+    <div class="product-main-wrapper">
+      <div class="product-main-inner">
+        <div id="w-node-_6a73b9fe-d9ad-0820-98ea-b7508ab58fff-6b9b657d" class="col-75">
+
+
+          <div data-current="Tab 1" id="jc-show-slider-{{variant.id}}" data-easing="ease" data-duration-in="300" data-duration-out="100" class="single-product-img-tabs w-tabs">
+            <div class="tabs-menu-2 w-tab-menu">
+              {% for image in product.images %}
+                
+                <a aria-hidden="true" tabindex="-1" data-w-tab="Tab {{ forloop.index }}" class="tab-link-product w-inline-block single-product-thumbnail-img
+                {%comment%}
+                Chip zel pop Id: 1537893433401
+                Nutty Choco pop Id: 1537801388089
+                Chocolate Pretzel id: 1537790410809
+                Peanut Butter Cup id: 1537903099961
+                {%endcomment%}
+      
+                {% if product.id == 1537893433401 %}
+                yellow
+                {% endif %}
+                {% if product.id == 1537801388089 %}
+                green
+                {% endif %}
+                {% if product.id == 1537790410809 %}
+                pink
+                {% endif %}
+                {% if product.id == 1537903099961 %}
+                brown
+                {% endif %}
+                {%comment%}
+                style="background-image: url({{ image | img_url: '512x' }});"
+                {%endcomment%}
+                 
+                 w-tab-link {% if forloop.first == true %}w--current{% endif %}"  jc-variant-id="{{ image | img_url: '800x' }}">
+                 <div class="tab-link-img-wrapper-product"><img src="{{ image | img_url: '800x' }}" loading="lazy" alt="{{product.title}}" class="tab-link-img-product"></div>
+                </a>
+            
+              {% endfor %}
+            </div>
+            <div class="tabs-content-2 w-tab-content">
+      
+              {% for image in product.images %}
+              <div data-w-tab="Tab {{ forloop.index }}" class="tab-content-wrapper w-tab-pane {% if forloop.first == true %}w--tab-active{% endif %}">
+                <div class="tab-inner-product">
+                <div class="tab-img-wrapper-product">
+                  <div class="main-product-img-wrapper"><img src="{{ image | img_url: '1500x' }}" loading="eager" alt="{{product.title}}" class="tab-img-product"></div>
+                </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+        </div>
+
+        {%- assign productPriceChange = current_variant.price | money -%}
+        {%- assign current_variant = product.selected_or_first_available_variant -%}
+        {%- assign compare_at_price = current_variant.compare_at_price -%}
+        {%- assign price = current_variant.price -%}
+        <div class="product-img-grid hidden">
+          <div id="w-node-_121f331a-068b-748b-ba4e-8ba79102a8ad-6b9b657d" class="product-thumb-img-inner"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-11.2oz-min.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-11.2oz-min-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-11.2oz-min-p-800.jpg 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-11.2oz-min-p-1080.jpg 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-11.2oz-min.jpg 1400w" sizes="100vw" alt="" class="product-thumb-img"></div>
+          <div id="w-node-_296ed09d-eeb4-1bb6-0a8d-e4dce213449d-6b9b657d" class="product-thumb-img-inner"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CP-small-2oz-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CP-small-2oz-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CP-small-2oz-min-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CP-small-2oz-min-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CP-small-2oz-min.png 1400w" sizes="100vw" alt="" class="product-thumb-img"></div>
+          <div id="w-node-_5e75d425-d4ee-d4cf-4180-e16e2307ccb1-6b9b657d" class="product-thumb-img-inner"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-8oz-min.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-8oz-min-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-8oz-min-p-800.jpg 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-8oz-min-p-1080.jpg 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-canister-8oz-min.jpg 1400w" sizes="100vw" alt="" class="product-thumb-img"></div>
+          <div id="w-node-_5842201b-fa66-0235-3ca6-eb5a84a6e0b3-6b9b657d" class="product-thumb-img-inner"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-small-2oz-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-small-2oz-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-small-2oz-min-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-small-2oz-min-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-small-2oz-min.png 1400w" sizes="100vw" alt="" class="product-thumb-img"></div>
+          <div id="w-node-ab7d3fd1-722d-4c47-d623-19f426da7806-6b9b657d" class="product-thumb-img-inner"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-small-2oz-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-small-2oz-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-small-2oz-min-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-small-2oz-min-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-small-2oz-min.png 1400w" sizes="100vw" alt="" class="product-thumb-img"></div>
+        </div>
+        <div class="product-main-img hidden"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/FC_10012_19oz_Canister_CHOCOLATE_PRETZEL.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/FC_10012_19oz_Canister_CHOCOLATE_PRETZEL-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/FC_10012_19oz_Canister_CHOCOLATE_PRETZEL-p-800.jpg 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/FC_10012_19oz_Canister_CHOCOLATE_PRETZEL-p-1080.jpg 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/FC_10012_19oz_Canister_CHOCOLATE_PRETZEL.jpg 1400w" sizes="100vw" alt="" class="product-img"></div>
+        <div id="w-node-e6c50c12-b49d-90de-5260-ccf60d7c8a10-6b9b657d" class="product-info-wrapper">
+
+
+          <h1 class="product-title-main
+
+          {% if product.id == 1537893433401 %}
+          yellow
+          {% endif %}
+          {% if product.id == 1537801388089 %}
+          green
+          {% endif %}
+          {% if product.id == 1537790410809 %}
+          pink
+          {% endif %}
+          {% if product.id == 1537903099961 %}
+          brown
+          {% endif %}
+
+
+          ">{{ product.title}}</h1>
+
+
+          <div class="price-review-flex">
+            <div class="review-wrapper-flex-col">
+              {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: false, product: product %}
+
+            </div>
+          </div>
+
+          
+          <div class="ingredient-flex-row">
+
+            {% for ingredient in product.metafields.ingredient.product_ingredient_highlights_3.value %}
+              <div class="ingredient-text">{{ ingredient }}</div>
+              {% unless forloop.last == true %}
+              <div class="ingredient-text pink-text">    |    </div>
+              {% endunless %}
+            {% endfor %}
+
+          </div>
+          <div class="line margin-vert-alt"></div>
+          <p class="black-text-flavor">
+            {{product.description}}
+            
+            
+          <div class="line margin-vert-alt"></div>
+
+          <div class="jc-product-page-form-wrapper">
+
+            <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+            <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
+
+            {% capture "form_classes" %}
+              product-single__form{% if product.has_only_default_variant %} product-single__form--no-variants{% endif %}
+            {%- endcapture %}
+
+            {% capture "form_id" %}AddToCartForm--{{ section.id }}{%- endcapture %}
+
+
+            {% form 'product', product, class:form_classes, id:form_id %}
+
+                
+                
+              <div class="ro_widget"></div>
+
+              {% if product.variants.size > 1 and product.available %}
+             
+
+                <div class="price-review-flex">
+            
+                  {% if is_available == true %}
+                    {% if compare_at_price > price  %}
+                      <div class="price-text-product">
+                        <span style="text-decoration: line-through">{{compare_at_price | money }}</span> <span id="price">{{current_variant.price | money }}</span>
+                      </div>
+                      {% else %}
+                        <div class="black-text no-margin-b bold larger-p-text price-text-product" id="price">
+                          {{current_variant.price | money }}
+                        </div>
+                    {% endif %}
+                  {% else %}
+                    <div class="product-page-price-text"><span style="text-decoration: line-through;" id="price">{{product.price | money }}</span> Sold Out</div>
+                  
+                  {% endif %}
+                  
+                </div>
+              
+                <div class="size-flex-row">
+                
+                  
+
+                  
+
+
+
+                      {% unless product.has_only_default_variant %}
+                        {% for product_option in product.options_with_values %}
+
+                        <div class="select-container">
+
+                          <p class="black-text no-margin-b">{{ product_option.name }}:</p>
+                          <div class="">
+
+                             <select aria-label="Variants" id="select-{{forloop.index}}" class="form-text-field color w-dropdown product-page-select form-select-product size-dropdown">
+                               {% for value in product_option.values %}
+                               <option class="variant-option" jc-option-id="{{option.id}}" {% if product_option.selected_value == value %}selected{% endif %}>{{value}}</option>
+                               {% endfor %}
+                              </select>
+
+                          </div>
+                        </div>
+                        {% endfor %}
+                      {% endunless %} 
+
+     
+                      
+                        <select name="id" id="product-select" class="jc-product-select product-form__variants no-js" style="display:none;">
+                          {% for variant in product.variants %}
+                            {% if variant.available %}
+                              <option jc-price="{{variant.price | money}}" {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                                {{ variant.title }} 
+                              </option>
+                            {% else %}
+                              <option jc-price="Sold Out" disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                            {% endif %}
+                          {% endfor %}
+                        </select>
+                        
+
+                
+                </div>
+                
+              {%else%}
+             
+
+              <div class="price-review-flex">
+            
+                {% if is_available == true %}
+                  {% if compare_at_price > price  %}
+                    <div class="price-text-product">
+                      <span style="text-decoration: line-through">{{compare_at_price | money }}</span> <span id="price">{{current_variant.price | money }}</span>
+                    </div>
+                    {% else %}
+                      <div class="black-text no-margin-b bold larger-p-text price-text-product" id="price">
+                        {{current_variant.price | money }}
+                      </div>
+                  {% endif %}
+                {% else %}
+                  <div class="product-page-price-text"><span style="text-decoration: line-through;" id="price">{{product.price | money }}</span> Sold Out</div>
+                
+                {% endif %}
+                
+              </div>
+
+
+              <select name="id" id="product-select" class="jc-product-select product-form__variants no-js" style="display:none;">
+                {% for variant in product.variants %}
+                  {% if variant.available %}
+                    <option jc-price="{{variant.price | money}}" {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                      {{ variant.title }} 
+                    </option>
+                  {% else %}
+                    <option jc-price="Sold Out" disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+
+              {%endif%}
+
+             
+                              
+              <div class="quantity-and-cart-btn-wrapper">
+                              
+              <div class="product-single__add-to-cart jc-product-page-btn-wrapper">
+
+               {% if product.tags contains 'Prime' %}
+
+
+
+
+                <!-- Beginning of Buy With Prime Widget -->
+                <script async fetchpriority='high' src='https://code.buywithprime.amazon.com/bwp.v1.js'></script>
+                {% if product.sku %}
+                <div
+                id="amzn-buy-now"
+                data-site-id="bwzixiu235"
+                data-widget-id="w-YnIpH3tuxkfdRIekdFes20"
+                data-sku="{{product.sku}}"
+                ></div>
+                {% else %}
+                <div
+                id="amzn-buy-now"
+                data-site-id="bwzixiu235"
+                data-widget-id="w-YnIpH3tuxkfdRIekdFes20"
+                data-sku="{{product.selected_or_first_available_variant.sku}}"
+                ></div>
+                {% endif %}
+                <!-- End of Buy With Prime Widget -->
+
+                <!---Beginning of Buy With Prime Reviews-->
+                  {% if product.sku %}
+                <div
+                id="amzn-roa-rating"
+                data-site-id="bwzixiu235"
+                data-roa-instance-id="canr82kcfhni7"
+                data-sku="{{product.sku}}"
+                ></div>
+                {% else %}
+                <div
+                id="amzn-roa-rating"
+                data-site-id="bwzixiu235"
+                data-roa-instance-id="canr82kcfhni7"
+                data-sku="{{product.selected_or_first_available_variant.sku}}">
+                </div>
+                {% endif %}
+
+                {% if product.sku %}
+                <div
+                id="amzn-roa-reviews"
+                data-site-id="bwzixiu235"
+                data-roa-instance-id="canr82kcfhni7"
+                data-sku="{{product.sku}}"
+                ></div>
+                {% else %}
+                    <div
+                        id="amzn-roa-reviews"
+                        data-site-id="bwzixiu235"
+                        data-roa-instance-id="canr82kcfhni7"
+                        data-sku="{{product.selected_or_first_available_variant.sku}}">
+                    </div>
+                {% endif %}
+                <!-- End of Buyer With Prime Reviews-->
+
+
+
+
+                {%else%}
+                {% if is_available %}
+                  <div class="size-flex-row">
+                    <p class="black-text no-margin-b product-q">Qty:</p>
+                    <div class="jc-product-page-flex-col jc-product-page-flex-col-input">
+                      <div class="jc-product-quantity-wrapper">
+                        <a id="jc-quantity-btn-down" href="#" class="jc-quantity-btn">
+                          <div class="qty-btn"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/minus.svg" loading="lazy" alt="Decrease Quantity" class="qty-btn-img"></div>
+                        </a>
+                        <input aria-label="Quantity" type="number" id="Quantity" name="quantity" value="1" min="1" class="js-quantity-selector jc-js-quantity-selector">
+                        <a id="jc-quantity-btn-up" href="#" class="jc-quantity-btn">
+                          <div class="qty-btn"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/plus.svg" loading="lazy" alt="Increase Quantity" class="qty-btn-img"></div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cart-gift-flex-row">
+                      <div class="product-button-wrapper">
+                    <button type="submit" name="add" id="AddToCart--{{ section.id }}" class="general-btn dark-with-w-text _48 margin-b-mob w-button">
+                      <span class="btn__text">
+                      Add to Cart
+                      </span>
+                    </button>
+                    </div>
+                  </div>     
+                  {% else %}         
+                <button disabled="disabled" type="submit" name="add" id="AddToCart--{{ section.id }}" class="general-btn dark-with-w-text _48 margin-b-mob w-button">
+                  <span class="btn__text">
+                    {{ 'products.product.sold_out' | t }}
+                  </span>
+                </button> 
+                    {% endif %}
+                    
+                    
+                    
+                  {% endif %}
+
+
+              
+                  {% if product.metafields.product_info.display_buy_with_prime == true %}
+                    
+                    <div class="buy-with-prime-wrapper">
+                      <img class="prime-product-img" src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/icon-BuyWithPrime.png?v=1680802983" alt="Buy with prime image">
+                      <div class="right-wrapper">
+                        <p>Need it faster? Get Free 2-Day Shipping</p>
+                        <a href="{{product.metafields.product_info.prime_product_link}}" class="general-btn dark-with-w-text prime-btn w-button">BUY WITH PRIME</a>
+                      </div>
+                    </div>
+                  {% endif %}
+
+
+
+              </div>
+
+
+              {%- comment -%}
+                <div class="via-bill-container">
+                  
+                  {% if product.variants.size > 1 %}
+                    {% if product.compare_at_price_min > product.price %}
+                      <div style="margin: 20px -105px -10px -10px; display: flex; justify-content: center;">
+                        <div class="viabill-pricetag" data-view="list" data-language="EN" data-currency="USD" data-dynamic-price=".product-single__price" data-dynamic-price-triggers=".single-option-radio.jc-single-option-radio-fieldset" data-scale="1.1"></div>
+                      </div>
+                      {% else %}
+                      <div style="margin: 20px -105px -10px -10px; display: flex; justify-content: center;">
+                        <div class="viabill-pricetag" data-view="list" data-language="EN" data-currency="USD" data-dynamic-price=".product-single__price" data-dynamic-price-triggers=".single-option-radio.jc-single-option-radio-fieldset" data-scale="1.1"></div>
+                      </div>
+                    {% endif %}    
+                    {% else %}
+                    <div style="margin: 20px -105px -10px -10px; display: flex; justify-content: center;">
+                      <div class="viabill-pricetag" data-view="product" data-price="{{ product.price | money }}" data-language="en" data-currency="USD" data-scale="1.1"></div>
+                    </div>
+                  {% endif %} 
+                  
+                </div>
+              {%- endcomment -%}
+
+            </div>
+
+              {%- comment -%}
+                {{ form | payment_terms }}
+              {%- endcomment -%}
+
+            {% endform %}
+          </div> <!-- form wrapper -->
+
+
+          
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {% unless product.id == 4713003909203 %}
+    <div class="info-section-product">
+
+      {% if product.id == 1537893433401 %}
+      <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/shop-details-frame-yellow.svg?v=1660925913" loading="lazy" alt="">
+      {% elsif product.id == 1537801388089 %}
+      <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/shop-details-frame-green.svg?v=1660925914" loading="lazy" alt="">
+      {% elsif product.id == 1537790410809 %}
+      <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/shop-details-frame-pink.svg?v=1660925914" loading="lazy" alt="">
+      {% elsif product.id == 1537903099961 %}
+      <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/shop-details-frame-tan.svg?v=1660925914" loading="lazy" alt="">
+      {%else%}
+      <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/shop-details-frame-blue.svg?v=1660925914" loading="lazy" alt="">
+      {% endif %}
+      
+
+      <div class="general-black-back">
+        <div class="info-content-wrapper-product">
+          <div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100" class="w-tabs">
+            <div class="tab-menu-info w-tab-menu">
+              <a data-w-tab="Tab 1" class="tab-link-info           
+              {% if product.id == 1537893433401 %}
+              yellow
+              {% endif %}
+              {% if product.id == 1537801388089 %}
+              green
+              {% endif %}
+              {% if product.id == 1537790410809 %}
+              pink
+              {% endif %}
+              {% if product.id == 1537903099961 %}
+              brown
+              {% endif %} w-inline-block w-tab-link w--current">
+                <div>reviews</div>
+              </a>
+              <a data-w-tab="Tab 2" class="tab-link-info 
+              {% if product.id == 1537893433401 %}
+              yellow
+              {% endif %}
+              {% if product.id == 1537801388089 %}
+              green
+              {% endif %}
+              {% if product.id == 1537790410809 %}
+              pink
+              {% endif %}
+              {% if product.id == 1537903099961 %}
+              brown
+              {% endif %} w-inline-block w-tab-link">
+                <div>ingredients</div>
+              </a>
+              <a data-w-tab="Tab 3" class="tab-link-info 
+              {% if product.id == 1537893433401 %}
+              yellow
+              {% endif %}
+              {% if product.id == 1537801388089 %}
+              green
+              {% endif %}
+              {% if product.id == 1537790410809 %}
+              pink
+              {% endif %}
+              {% if product.id == 1537903099961 %}
+              brown
+              {% endif %} w-inline-block w-tab-link">
+                <div>nutRITIONAL FACTS</div>
+              </a>
+              <a data-w-tab="Tab 4" class="tab-link-info 
+              {% if product.id == 1537893433401 %}
+              yellow
+              {% endif %}
+              {% if product.id == 1537801388089 %}
+              green
+              {% endif %}
+              {% if product.id == 1537790410809 %}
+              pink
+              {% endif %}
+              {% if product.id == 1537903099961 %}
+              brown
+              {% endif %} w-inline-block w-tab-link">
+                <div>allergy info</div>
+              </a>
+            </div>
+            <div class="w-tab-content">
+              <div data-w-tab="Tab 1" class="tab-pane-info-product w-tab-pane w--tab-active">
+                <div data-delay="4000" data-animation="slide" class="slider-reviews w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+                  <div class="w-slider-mask">
+                    <div class="w-slide">
+                      <div class="review-slider-inner">
+                        <div class="review-flex-individ">
+                          <div class="star-img-wrapper-review"><img loading="lazy" src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/rating-stars-w.svg" alt="Five white stars in an arch, the middle star being the furthest to the top"></div>
+                          <h2>couldn&#x27;t put it down</h2>
+                          <p>I&#x27;m a popcorn lover; this mix takes it to another dimension. My family lost their mind I had to order 5lbs a few days later.</p>
+                          <p class="bold-text">Angela R.</p>
+                        </div>
+                        <div class="review-flex-individ">
+                          <div class="star-img-wrapper-review"><img loading="lazy" src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/rating-stars-w.svg" alt="Five white stars in an arch, the middle star being the furthest to the top"></div>
+                          <h2>yummy</h2>
+                          <p>Yummy! Received these for Mothers Day. I’m ordering some for myself since there’s none left lol. However there were a lot of small pieces, crumbs, at the bottom.</p>
+                          <p class="bold-text">Denise</p>
+                        </div>
+                        <div class="review-flex-individ">
+                          <div class="star-img-wrapper-review"><img loading="lazy" src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/rating-stars-w.svg" alt="Five white stars in an arch, the middle star being the furthest to the top"></div>
+                          <h2>FABULOUS</h2>
+                          <p>this popcorn is probably the best i ever had. love the chocolate and peanut butter together with the caramel corn.</p>
+                          <p class="bold-text">Elizabeth H.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-slide">
+                      <div class="review-slider-inner">
+                        <div class="review-flex-individ">
+                          <div class="star-img-wrapper-review"><img loading="lazy" src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/rating-stars-w.svg" alt="Five white stars in an arch, the middle star being the furthest to the top"></div>
+                          <h2>absolutely incredible</h2>
+                          <p>I&#x27;m a popcorn lover; this mix takes it to another dimension. My family lost their mind I had to order 5lbs a few days later.</p>
+                          <p class="bold-text">Rafael V.</p>
+                        </div>
+                        <div class="review-flex-individ">
+                          <div class="star-img-wrapper-review"><img loading="lazy" src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/rating-stars-w.svg" alt="Five white stars in an arch, the middle star being the furthest to the top"></div>
+                          <h2>Best popcorn ever</h2>
+                          <p>Yummy! Received these for Mothers Day. I’m ordering some for myself since there’s none left lol. However there were a lot of small pieces, crumbs, at the bottom.</p>
+                          <p class="bold-text">Em</p>
+                        </div>
+                        <div class="review-flex-individ">
+                          <div class="star-img-wrapper-review"><img loading="lazy" src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/rating-stars-w.svg" alt="Five white stars in an arch, the middle star being the furthest to the top"></div>
+                          <h2>can&#x27;t get enough</h2>
+                          <p>this popcorn is probably the best i ever had. love the chocolate and peanut butter together with the caramel corn.</p>
+                          <p class="bold-text">Chase H.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="arrow-review-slider left w-slider-arrow-left"><img loading="lazy" src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/arrow-left-w.svg" alt="" class="img-slider-abs"></div>
+                  <div class="arrow-review-slider w-slider-arrow-right"><img loading="lazy" src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/arrow-right-w.svg" alt="" class="img-slider-abs"></div>
+                  <div class="slide-nav-review w-slider-nav w-round"></div>
+                </div>
+              </div>
+              <div data-w-tab="Tab 2" class="tab-pane-info-product w-tab-pane">
+                
+                <p>{{product.metafields.product_info.ingredients}}</p>
+                {%comment%}
+                <ul role="list">
+                  {% for ingredient in product.metafields.ingredient.ingredients.value %}
+                  
+                  <li class="ingredients-list-item">{{ ingredient }}</li>
+                  
+                {% endfor %}
+                </ul>
+                {%endcomment%}
+              </div>
+              <div data-w-tab="Tab 3" class="tab-pane-info-product w-tab-pane">
+                <div class="nutrition-img-wrapper">
+                  <p>{{ product.metafields.product_info.nutritional_facts_tab }}</p>
+                  {% if product.metafields.product_info.nutrition_facts_image %}
+                  <img class="nutrition-facts-image" src="{{ product.metafields.product_info.nutrition_facts_image | file_url }}" alt="Nutrition Facts">
+                  {% endif %}
+                </div>
+              </div>
+              <div data-w-tab="Tab 4" class="tab-pane-info-product w-tab-pane">
+                <p>{{ product.metafields.product_info.allergy_info_tab }}</p>
+
+                {%comment%}
+                <ul role="list">
+                  {% for product_info in product.metafields.product_info.allergy_info.value %}
+                  <li class="ingredients-list-item">{{ product_info }}</li>
+                {% endfor %}
+                </ul>
+                {%endcomment%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%endunless%}
+
+  
+  <div class="black-back-section">
+    <div class="general-white-front margin-b margin-t">
+      <div class="general-sub-hero-heading-wrapper">
+        <h1 class="black-text">Similar Products<span class="break-line"></span></h1>
+      </div>
+
+      
+      <div class="recomended-product-wrapper">
+        <div class="recomended-product-inner">
+          {% assign main_product_id = product.id  %}
+
+          {% for product in collections["all-products"].products limit:4 %}
+
+              {%- assign iteration_number = forloop.index -%}
+              {% assign current_variant = product.selected_or_first_available_variant %}
+
+              {%unless product.id == main_product_id or iteration_number > 3 %}
+                  <div class="shop-flex-col-item center">
+                    <a href="{{ product.url }}" class="shop-img-wrapper w-inline-block">
+                      <img src="{{ product.featured_image | product_img_url: 'medium' }}" alt="{{ product.title | escape }}" loading="lazy"  sizes="(max-width: 479px) 89.765625px, (max-width: 767px) 160px, 200px" class="img-shop"></a>
+                    <div id="w-node-_2c453dd0-c9ca-8595-de3c-3a5b7b5c5cc5-dd266cfc" class="shop-name-inner">
+                      <h2 class="black-text no-margin-b no-margin-t">
+                        <a href="{{ product.url }}" class="black-bright-blue-link">{{product.title}}</a><span class="break-line"></span>
+                      </h2>
+
+                    {% if product.metafields.product_info.collection_description %}
+                      <p class="black-text smaller">{{ product.metafields.product_info.collection_description }}</p>
+                    {% endif %}
+                        
+                    </div>
+
+                    <p class="black-text center">{{product.price | money }}</p>
+
+                  </div>
+
+                  {%endunless%}
+
+          {% endfor %}
+        </div>
+      </div>
+
+      {%comment%}
+      <div class="best-seller-grid">
+        <div id="w-node-a4a64fd9-dac5-41dc-8d2e-305a7f8888e4-6b9b657d" class="best-seller-img-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/NCP-large-5oz-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/NCP-large-5oz-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/NCP-large-5oz-min-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/NCP-large-5oz-min-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/NCP-large-5oz-min.png 1400w" sizes="(max-width: 767px) 150px, 200px" alt="" class="img-best-seller"></div>
+        <div id="w-node-_90bac15a-c9b6-68ec-b9e9-5e017e8cb944-6b9b657d" class="best-seller-img-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-large-5oz-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-large-5oz-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-large-5oz-min-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-large-5oz-min-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-large-5oz-min.png 1400w" sizes="(max-width: 767px) 150px, 200px" alt="" class="img-best-seller"></div>
+        <div id="w-node-_4e9799b1-41b2-8d82-e2d5-dfa5fc435aa8-6b9b657d" class="best-seller-img-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-large-5oz-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-large-5oz-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-large-5oz-min-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-large-5oz-min-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-large-5oz-min.png 1400w" sizes="(max-width: 767px) 150px, 200px" alt="" class="img-best-seller"></div>
+        
+        <div id="w-node-_2c453dd0-c9ca-8595-de3c-3a5b7b5c5cc5-6b9b657d" class="best-seller-name-inner">
+          <h2 class="black-text no-margin-b no-margin-t">nutty choco pop<span class="break-line"></span></h2>
+          <p class="black-text smaller">Large Bag (5oz.)</p>
+        </div>
+
+        <div id="w-node-_10acf58b-f2cf-2372-4a9c-f68163011112-6b9b657d" class="best-seller-name-inner">
+          <h2 class="black-text no-margin-b no-margin-t">Sea salt caramel<span class="break-line"></span></h2>
+          <p class="black-text smaller">Large Bag (5oz.)</p>
+        </div>
+
+        <div id="w-node-d91ab1bb-7ba4-540b-efe3-501d439f8bcf-6b9b657d" class="best-seller-name-inner">
+          <h2 class="black-text no-margin-b no-margin-t">Chip zel pop<span class="break-line"></span></h2>
+          <p class="black-text smaller">Large Bag (5oz.)</p>
+        </div>
+
+        <p id="w-node-db3a0cad-4571-f124-2384-20ec113caa28-6b9b657d" class="black-text">$5.99</p>
+        <p id="w-node-fc585a31-5aae-a158-9724-78932ce5c348-6b9b657d" class="black-text">$5.99</p>
+        <p class="black-text">$5.99</p>
+        `
+      </div>
+
+      {%endcomment%}
+
+      {% unless product.id == 4713003909203 %}
+        <div class="all-reviews-wrapper">
+          {%comment%}
+          <h1 class="black-text center">see all reviews<span class="break-line"></span></h1>
+          {%endcomment%}
+          <div class="all-reviews-placeholder">
+            {% render 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: false, product: product %}
+          </div>
+        </div>
+      {% endunless %}
+
+    {% if product.id == 4713003909203 %}
+      <style>
+        .black-back-section{
+          background-color: #fff;
+        }
+      </style>
+    {% endif %}
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function() { 
+  
+      function incrementDown() {
+  
+          $('.jc-js-quantity-selector').val( function(i, oldval) {
+              return --oldval;
+          });
+      }
+  
+      function incrementUp() {
+  
+          $('.jc-js-quantity-selector').val( function(i, oldval) {
+              return ++oldval;
+          });
+      }
+  
+  
+      $("#jc-quantity-btn-down").click(function(){
+        incrementDown();
+      });
+  
+      $("#jc-quantity-btn-up").click(function(){
+        incrementUp();
+      });
+  
+      $(".jc-quantity-btn").hover(function(){
+        var breaker = $(this).find('.jc-quantity-btn-breaker');
+        breaker.css("background-color", "#ffffff");
+        }, function(){
+        var breaker = $(this).find('.jc-quantity-btn-breaker');
+        breaker.css("background-color", "#0049434d");
+      });
+  
+     });
+
+
+
+  
+  </script>
+
+
+
+
+{% schema %}
+{
+  "name": "Product Page" ,
+  "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_swactches",
+        "label": "Use color swatches for variants?",
+        "default": false
+      }
+  ]
+}
+{% endschema %}
+

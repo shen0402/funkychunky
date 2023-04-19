@@ -1,0 +1,171 @@
+<div class="product-row-section">
+  <div id="best-sellers" class="product-row-container-category">
+    <div class="product-section-heading-wrapper product-section-heading-wrapper-category">
+      <h3 class="product-section-row-heading-category">{{section.settings.section_heading}}</h3>
+    </div>
+
+    {% assign product_limit = section.settings.product_limit %}
+    {% assign jc_slide_inner_class = '' %}
+    {% assign jc_slider_class = '' %}
+
+    {% if product_limit <= 4 %}
+      {% assign jc_hide_class = 'product-slider-arrow-category-page-hide' %}
+      {% assign jc_slide_inner_class = 'product-slide-inner-category-page-single' %}
+      {% assign jc_slider_class = 'product-slider-category-page-single' %}
+    {% endif %}
+
+
+    <div class="category-page-product-slider-wrapper">
+      <div data-animation="slide" data-duration="500" data-infinite="1" class="product-slider-category-page {{jc_slider_class}} w-slider">
+        <div class="w-slider-mask">
+
+
+          {% for block in section.blocks %}
+            {% assign product = all_products[block.settings.title]  %}
+            {%- assign current_variant = product.selected_or_first_available_variant -%}
+            {%- assign compare_at_price = current_variant.compare_at_price -%}
+            {%- assign price = current_variant.price -%}
+
+            {% if forloop.index == 1 or 
+              forloop.index == 5 or 
+              forloop.index == 9 or
+              forloop.index == 13
+              %}
+
+                <div class="w-slide">
+                  <div class="product-slide-inner-category-page {{jc_slide_inner_class}}">
+                    <div class="product-section-row">
+
+              {% endif %}
+
+
+                <div class="product-section-col">
+                  <div class="product-section-col-inner product-section-col-inner-category">
+                    <div>
+                      <div class="product-section-img-wrapper">
+                        <a aria-label="{{ product.title | escape }}" href="{{product.url}}" class="product-section-img-link w-inline-block">
+                          <img src="{{ product.featured_image | img_url: '800x' }}" class="product-section-img" alt="{{ product.title | escape }}">
+                        </a>
+                      </div>
+                      <h5 class="product-section-col-heading">{{product.title}}</h5>
+                      {% if compare_at_price > price  %}
+                        <div class="product-section-col-text"><span style="text-decoration: line-through;">{{ compare_at_price | money }}</span> {{price | money }}</div>
+                      {% else %}
+                      <div class="product-section-col-text">{{price | money }}</div>
+                      {% endif %}
+                    </div>
+                    <div class="product-section-btn-wrapper">
+                      <a href="{{product.url}}" class="product-section-btn-link w-inline-block">
+                        <div>Shop Now<span class="visually-hidden"> {{ product.title }}</span></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              {% if forloop.index == 4 or 
+                forloop.index == 8 or 
+                forloop.index == 12 or
+                forloop.index == 16 or
+                forloop.last == true 
+                %}
+                  </div>
+                </div>
+              </div>
+                {% endif %}
+
+          {% endfor %}
+
+          
+
+              
+
+        </div>
+
+        <div class="product-slider-arrow-category-page {{jc_hide_class}} w-slider-arrow-left">
+          <div class="w-icon-slider-left"></div>
+        </div>
+        <div class="product-slider-arrow-category-page {{jc_hide_class}} w-slider-arrow-right">
+          <div class="w-icon-slider-right"></div>
+        </div>
+        <div class="product-slide-nav-category-page w-slider-nav w-round"></div>
+
+      </div>
+    </div>
+{% comment %}
+
+    <div class="product-section-row">
+
+      
+
+      {% for product in collections.best-sellers.products limit:product_limit %}
+        {%- assign current_variant = product.selected_or_first_available_variant -%}
+        {%- assign compare_at_price = current_variant.compare_at_price -%}
+        {%- assign price = current_variant.price -%}
+        <div class="product-section-col">
+          <div class="product-section-col-inner product-section-col-inner-category">
+            <div>
+              <div class="product-section-img-wrapper">
+                <a aria-label="{{ product.title | escape }}" href="{{product.url}}" class="product-section-img-link w-inline-block">
+                  <img src="{{ product.featured_image | img_url: '800x' }}" class="product-section-img" alt="{{ product.title | escape }}">
+                </a>
+              </div>
+              <h5 class="product-section-col-heading">{{product.title}}</h5>
+              {% if compare_at_price > price  %}
+                <div class="product-section-col-text"><span style="text-decoration: line-through;">{{ compare_at_price | money }}</span> {{price | money }}</div>
+              {% else %}
+              <div class="product-section-col-text">{{price | money }}</div>
+              {% endif %}
+            </div>
+            <div class="product-section-btn-wrapper">
+              <a href="{{product.url}}" class="product-section-btn-link w-inline-block">
+                <div>Shop Now<span class="visually-hidden"> {{ product.title }}</span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+    </div> <!-- product-section-row -->
+    {% endcomment %}
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Best Sellers Row",
+  "max_blocks": 16,
+  "settings": [
+      {
+         "type": "text",
+         "id": "section_heading",
+         "default": "Check Out Our Best Sellers",
+         "label": "Section Heading"
+      },
+      {
+           "type": "range",
+           "id": "product_limit",
+           "label": "How many products to show?",
+           "min": 1,
+           "max": 16,
+           "step": 1,
+           "default": 4
+        }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Product",
+      "settings": [
+        
+        {
+         "type": "product",
+         "id": "title",
+         "label": "Product"
+        }
+
+      ]
+    }
+  ]
+}
+{% endschema %}

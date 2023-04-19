@@ -1,0 +1,134 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+<div data-w-id="68c6c48e-2e2a-5221-0401-d7a1654e4d4b" style="display:none" class="sign-up-and-save">
+  <div data-w-id="4ba90790-4704-371a-a3f6-7428e251d113" class="pop-up-background"></div>
+  <div class="sign-up-and-save-wrapper">
+    <div class="sign-up-and-save-content">
+      <h1 class="no-margin-b smaller-h1-land">sign up and save</h1>
+      <p>Join our weekly newsletter and get <span class="bright-blue-text italic-text bold-text">15% OFF</span> your first order!</p>
+      <div class="klaviyo-form-XGGm8U"></div>
+
+
+      {%comment%}
+
+      <div class="w-form">
+
+
+        <form id="wf-form-Sign-up-and-save" name="wf-form-Sign-up-and-save" data-name="Sign up and save" method="get" class="form-flex">
+          <input type="text" class="text-field-sign-up w-input" maxlength="256" name="Email-Address" data-name="Email Address" placeholder="y
+          our email address" id="Email-Address"><input type="submit" value="»" data-wait="Please wait..." class="submit-sign-up w-button">
+        </form>
+
+        <div class="w-form-done">
+          <div>Thank you! Your submission has been received!</div>
+        </div>
+        <div class="w-form-fail">
+          <div>Oops! Something went wrong while submitting the form.</div>
+        </div>
+      </div>
+      {%endcomment%}
+
+
+
+
+    </div>
+    <div data-w-id="bd6904fa-cd64-30df-f4d8-288fa08ac693" class="close-block" role="button" tabindex="0" onkeydown="keyToClick(event);">
+      <div class="close-icon-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/close-w.svg?v=1660925299" loading="lazy" alt="" class="close-newsletter img-absolute"></div>
+      <p class="no-margin-b italic-text smaller-text">Close to Shop</p>
+    </div>
+  </div>
+</div>
+
+{% comment %}
+<div class="verification-modal">
+  <div class="verification-modal-content-wrapper">
+    <div class="verification-modal-inner">
+      <div class="verification-top-wrapper">
+        <div class="verification-img-wrapper"><img src="//cdn.shopify.com/s/files/1/0636/9355/3922/files/summit-mark-min.png" loading="lazy" alt="Summit" class="verification-img-top"></div>
+        <div class="verification-img-wrapper"><img src="//cdn.shopify.com/s/files/1/0636/9355/3922/files/summit-wordmark-min.png" loading="lazy" alt="" class="verification-img-bottom"></div>
+      </div>
+      <div class="verification-heading">Please confirm that you are 21 years of age or older.</div>
+      <div class="verification-btn-wrapper">
+        <a id="modal-enter" href="#" class="verification-btn w-button">Yes, I&#x27;m 21 years of age or older</a>
+      </div>
+      <div class="verification-btn-wrapper">
+        <a id="modal-exit" href="#" class="verification-btn-alt w-button">I&#x27;m Under 21 years old</a>
+      </div>
+      <div class="verification-modal-text">You must be legal age in your respective country for entry. By entering you accept our terms and conditions and our privacy policy.</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="newsletter-modal">
+  <div class="newsletter-modal-content-wrapper">
+    <div class="newsletter-flex-row-outer">
+      <div class="newsletter-flex-col-1">
+        <div class="newsletter-img-block"></div>
+      </div>
+      <div class="newsletter-flex-col-2">
+        <div class="newsletter-flex-col-inner">
+          <div class="newsletter-modal-heading-wrapper">
+            <h3 class="newsletter-modal-heading">Connect With Us!</h3>
+          </div>
+          <div class="newsletter-modal-sub-heading">SAVE 15%</div>
+          <div class="newsletter-modal-text">Sign up for the latest Summit updates, promotions, new product releases, and receive a 15% off summitTHC.com code!</div>
+          <div class="newsletter-form-block">
+            <div class="klaviyo-form-Ys8GJm"></div>
+             {%  %}
+            <form id="email-form" name="email-form" data-name="Email Form" method="get" action="#">
+              <input type="email" class="newsletter-form-input w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="Enter your email" id="email-2" required="">
+              <div class="newsletter-btn-wrapper"><input type="submit" value="Sign Up" data-wait="Please wait..." class="newsletter-form-btn w-button"></div>
+            </form>
+            {%  %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="newsletter-close-btn"><img tabindex="0" role="button" src="//cdn.shopify.com/s/files/1/0636/9355/3922/files/close_2close.png" loading="lazy" alt="Close Modal" class="newsletter-close-btn-img"></div>
+  </div>
+</div>
+{% endcomment %}
+
+
+
+
+
+<script type="text/javascript">
+      $(document).ready(function() {
+
+        if (!$.cookie('sk_newsletter_funky_chunky')) {
+          setTimeout(function() {
+            $('.sign-up-and-save').fadeIn(500);
+            $('body').css('overflow', 'hidden');
+            var date = new Date();
+            date.setTime(date.getTime() + 7776000000);
+            $.cookie('sk_newsletter_funky_chunky', true, {
+              expires: date
+            });
+            setTimeout(() => {
+              trapFocus('.sign-up-and-save-wrapper');
+            }, 600)
+            
+          }, 70);
+          
+        }
+        $('.close-block').click(function(e) {
+          e.preventDefault();
+          $('body').css('overflow', 'auto');
+          $('.sign-up-and-save').fadeOut(500);
+          /* $('.newsletter-modal').fadeTo(500, 0, function(){
+             $('.newsletter-modal').hide();
+           });*/
+        });
+        
+      });
+ </script>
+
+
+ {% schema %}
+ {
+   "name": "Pop-Ups"
+ }
+ {% endschema %}
+

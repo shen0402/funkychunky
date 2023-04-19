@@ -1,0 +1,799 @@
+{% render 'dropdown-js-nutrition' %}
+<div class="general-white-front top-flat">
+    <div class="nutrition-pill">
+      <h2>FOOD ALLERGY WARNING:</h2>
+      <p>Our products are made in an open kitchen that uses eggs, milk, peanuts, soy, tree nuts, and wheat. Cross contamination is a possibility.</p>
+    </div>
+    <div class="nutrition-flex-col">
+      <div class="nutrition-flex-row">
+        <div class="nutrition-img-wrapper">
+            
+            {%if section.settings.product_img_1 %}
+                <img src="{{section.settings.product_img_1 | img_url: 'large' }}" loading="lazy" class="img-nutrition-product" alt="{{ product_img_1.alt }}">
+            {%else%}
+                <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CP-top-min.jpg" loading="lazy" class="img-nutrition-product" alt="Chocolate Pretzel">
+            {%endif%}
+        </div>
+        <div class="nutrition-fact-text">
+          <h2 class="pink-text">{{section.settings.product_heading_1}}</h2>
+          <p class="black-text margin-b">{{section.settings.product_description_1}}</p> 
+          <div class="line"></div>
+          <div class="ingredient-flex-row-nutrition">
+            <div class="ingredient-text-nutrition">{{section.settings.product_ingredients_1}}</div>
+          </div>
+          <div class="line"></div>
+          <div class="nutrition-dropdown-full">
+            <div data-w-id="44d34b89-2e6c-1821-a75f-6b1f1d596171" class="nutrition-dropdown-toggle">
+              <div class="text-nutrition-wrapper">
+                <h6 style="opacity:1" class="h6-nutrition">View nutritional information</h6>
+                <h6 style="display:none;opacity:0" class="h6-nutrition-alt">Hide nutritional information</h6>
+              </div>
+              <div class="nutrition-info-btn-wrapper">
+                <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/minus.svg" loading="lazy" style="opacity:0;display:none" alt="" class="nutrition-img-toggle-alt">
+                <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/plus.svg" loading="lazy" style="opacity:1" alt="" class="nutrition-img-toggle">
+            </div>
+            </div>
+            <div class=" nutrition-information-extend hide">
+              <div class="nutrition-col">
+                {%comment%}
+                <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/nutrition-facts.jpg" loading="lazy" alt="">
+                {%endcomment%}
+                {%if section.settings.nutrition_img_1 %}
+                    <img src="{{section.settings.nutrition_img_1 | img_url: 'large' }}" loading="lazy" alt="{{ nutrition_img_1.alt | escape }}">
+                {%endif%}
+                </div>
+              <div class="nutrition-col">
+                <p class="black-text ingredient">{{section.settings.nutrition_text_1}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nutrition-flex-row">
+        <div class="nutrition-img-wrapper">
+            {%if section.settings.product_img_2 %}
+                <img src="{{section.settings.product_img_2 | img_url: 'large' }}" loading="lazy" class="img-nutrition-product" alt="{{ product_img_2.alt | escape }}">
+            {%else%}  
+                <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-top-min.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-top-min-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-top-min-p-800.jpg 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/SSC-top-min.jpg 1400w" sizes="(max-width: 991px) 250px, 28vw" alt="Sea Salt Caramel product, popcorn with chocolate and caramel drizzle visible" class="img-nutrition-product"></div>
+            {%endif%}
+        <div class="nutrition-fact-text">
+          <h2 class="bright-blue-text">{{section.settings.product_heading_2}}</h2>
+          <p class="black-text margin-b">{{section.settings.product_description_2}}</p>
+          <div class="line"></div>
+          <div class="ingredient-flex-row-nutrition">
+            <div class="ingredient-text-nutrition">{{section.settings.product_ingredients_2}}</div>
+          </div>
+          <div class="line"></div>
+          <div class="nutrition-dropdown-full">
+            <div data-w-id="1be292db-1c19-0a06-1505-197a836d4654" class="nutrition-dropdown-toggle">
+              <div class="text-nutrition-wrapper">
+                <h6 style="opacity:1" class="h6-nutrition">View nutritional information</h6>
+                <h6 style="display:none;opacity:0" class="h6-nutrition-alt">Hide nutritional information</h6>
+              </div>
+              <div class="nutrition-info-btn-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/minus.svg" loading="lazy" style="opacity:0;display:none" alt="" class="nutrition-img-toggle-alt"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/plus.svg" loading="lazy" style="opacity:1" alt="" class="nutrition-img-toggle"></div>
+            </div>
+            <div   class=" nutrition-information-extend hide">
+              <div class="nutrition-col">
+                {%if section.settings.nutrition_img_2 %}
+                    <img src="{{section.settings.nutrition_img_2 | img_url: 'large' }}" loading="lazy" alt="{{ nutrition_img_2.alt | escape }}">
+                {%else%}
+                    <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/nutrition-facts.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/nutrition-facts-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/nutrition-facts.jpg 600w" sizes="100vw" alt="">
+                {%endif%}
+            </div>
+              <div class="nutrition-col">
+                <p class="black-text ingredient">{{section.settings.nutrition_text_2}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nutrition-flex-row">
+        <div class="nutrition-img-wrapper">
+            {%if section.settings.product_img_3 %}
+                <img src="{{section.settings.product_img_3 | img_url: 'large' }}" loading="lazy" class="img-nutrition-product" alt="{{ product_img_3.alt | escape }}">
+            {%else%}  
+                <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/PBC-top-min.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/PBC-top-min-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/PBC-top-min-p-800.jpg 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/PBC-top-min-p-1080.jpg 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/PBC-top-min.jpg 1400w" sizes="(max-width: 991px) 250px, 28vw" alt="Peanut Butter Cup product, with popcorn, mini chocolate peanut butter cups, chocolate drizzle, and peanuts visible" class="img-nutrition-product">
+                
+            {%endif%}
+    </div>
+        <div class="nutrition-fact-text">
+          <h2 class="brown-text">{{section.settings.product_heading_3}}</h2>
+          <p class="black-text margin-b">{{section.settings.product_description_3}}</p>
+          <div class="line"></div>
+          <div class="ingredient-flex-row-nutrition">
+            <div class="ingredient-text-nutrition">{{section.settings.product_ingredients_3}}</div>
+          </div>
+          <div class="line"></div>
+          <div class="nutrition-dropdown-full">
+            <div data-w-id="b6cb7ba0-47e6-a1d6-d2c8-949cf66c29d9" class="nutrition-dropdown-toggle">
+              <div class="text-nutrition-wrapper">
+                <h6 style="opacity:1" class="h6-nutrition">View nutritional information</h6>
+                <h6 style="display:none;opacity:0" class="h6-nutrition-alt">Hide nutritional information</h6>
+              </div>
+              <div class="nutrition-info-btn-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/minus.svg" loading="lazy" style="opacity:0;display:none" alt="" class="nutrition-img-toggle-alt"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/plus.svg" loading="lazy" style="opacity:1" alt="" class="nutrition-img-toggle"></div>
+            </div>
+            <div   class=" nutrition-information-extend hide">
+              <div class="nutrition-col">
+                {%if section.settings.nutrition_img_3 %}
+                    <img src="{{section.settings.nutrition_img_3 | img_url: 'large' }}" loading="lazy" alt="{{ nutrition_img_3.alt | escape }}">
+                {%else%}
+                    <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/nutrition-facts.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/nutrition-facts-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/nutrition-facts.jpg 600w" sizes="100vw" alt="">
+                {%endif%}
+            </div>
+              <div class="nutrition-col">
+                <p class="black-text ingredient">{{section.settings.nutrition_text_3}}</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nutrition-flex-row">
+        <div class="nutrition-img-wrapper">
+            {%if section.settings.product_img_4 %}
+                <img src="{{section.settings.product_img_4 | img_url: 'large' }}" loading="lazy" class="img-nutrition-product">
+            {%else%}  
+                <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-top-min.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-top-min-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-top-min-p-800.jpg 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-top-min-p-1080.jpg 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/CZP-top-min.jpg 1400w" sizes="(max-width: 991px) 250px, 28vw" alt="Chip Zel Pop product, there is popcorn, potato chips, pretzel sticks, all with a white chocolate and chocolate drizzle." class="img-nutrition-product">
+            {%endif%}
+        </div>
+        <div class="nutrition-fact-text">
+          <h2 class="yellow-text">{{section.settings.product_heading_4}}</h2>
+          <p class="black-text margin-b">{{section.settings.product_description_4}}</p>
+          <div class="line"></div>
+          <div class="ingredient-flex-row-nutrition">
+            <div class="ingredient-text-nutrition">{{section.settings.product_ingredients_4}}</div>
+
+
+          </div>
+          <div class="line"></div>
+          <div class="nutrition-dropdown-full">
+            <div data-w-id="ca4a3236-96c7-fa35-5760-8e18f77c0e49" class="nutrition-dropdown-toggle">
+              <div class="text-nutrition-wrapper">
+                <h6 style="opacity:1" class="h6-nutrition">View nutritional information</h6>
+                <h6 style="display:none;opacity:0" class="h6-nutrition-alt">Hide nutritional information</h6>
+              </div>
+              <div class="nutrition-info-btn-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/minus.svg" loading="lazy" style="opacity:0;display:none" alt="" class="nutrition-img-toggle-alt"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/plus.svg" loading="lazy" style="opacity:1" alt="" class="nutrition-img-toggle"></div>
+            </div>
+            <div   class=" nutrition-information-extend hide">
+              <div class="nutrition-col">
+                {%if section.settings.nutrition_img_4 %}
+                    <img src="{{section.settings.nutrition_img_4 | img_url: 'large' }}" loading="lazy" alt="">
+                {%else%}
+                    <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/nutrition-facts.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/nutrition-facts-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/nutrition-facts.jpg 600w" sizes="100vw" alt="">
+                {%endif%}
+            </div>
+              <div class="nutrition-col">
+                <p class="black-text ingredient">{{section.settings.nutrition_text_4}}</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nutrition-flex-row">
+        <div class="nutrition-img-wrapper">
+            {%if section.settings.product_img_5 %}
+                <img src="{{section.settings.product_img_5 | img_url: 'large' }}" loading="lazy" class="img-nutrition-product">
+            {%else%}  
+                <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/NCP-top-min.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/NCP-top-min-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/NCP-top-min.jpg 768w" sizes="(max-width: 991px) 250px, 28vw" alt="Nutty Choco Pop product, there is popcorn, almonds, cashews, and white chocolate, caramel, and chocolate drizzle on all of them" class="img-nutrition-product">
+            {%endif%}
+            </div>
+        <div class="nutrition-fact-text">
+          <h2 class="green-text">{{section.settings.product_heading_5}}</h2>
+          <p class="black-text margin-b">{{section.settings.product_description_5}}</p>
+          <div class="line"></div>
+          <div class="ingredient-flex-row-nutrition">
+            <div class="ingredient-text-nutrition">{{section.settings.product_ingredients_5}}</div>
+          </div>
+          <div class="line"></div>
+          <div class="nutrition-dropdown-full">
+            <div data-w-id="d13fafa3-21a2-f5cf-7a92-a930f294d3af" class="nutrition-dropdown-toggle">
+              <div class="text-nutrition-wrapper">
+                <h6 style="opacity:1" class="h6-nutrition">View nutritional information</h6>
+                <h6 style="display:none;opacity:0" class="h6-nutrition-alt">Hide nutritional information</h6>
+              </div>
+              <div class="nutrition-info-btn-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/minus.svg" loading="lazy" style="opacity:0;display:none" alt="" class="nutrition-img-toggle-alt"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/plus.svg" loading="lazy" style="opacity:1" alt="" class="nutrition-img-toggle"></div>
+            </div>
+            <div   class=" nutrition-information-extend hide">
+              <div class="nutrition-col">
+                {%if section.settings.nutrition_img_5 %}
+                    <img src="{{section.settings.nutrition_img_5 | img_url: 'large' }}" loading="lazy" alt="">
+                {%else%}
+                    <img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/nutrition-facts.jpg" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/nutrition-facts-p-500.jpg 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/nutrition-facts.jpg 600w" sizes="100vw" alt="">
+                {%endif%}
+            </div>
+              <div class="nutrition-col">
+                <p class="black-text ingredient">{{section.settings.nutrition_text_5}}</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nutrition-flex-row">
+        <div class="nutrition-img-wrapper">
+            {%if section.settings.product_img_6 %}
+                <img src="{{section.settings.product_img_6 | img_url: 'large' }}" loading="lazy" class="img-nutrition-product" alt="{{ product._img_6.alt | escape }}">
+            {%endif%}
+        </div>
+        <div class="nutrition-fact-text">
+          <h2 class="blue-text">{{section.settings.product_heading_6}}</h2>
+          <p class="black-text margin-b">{{section.settings.product_description_6}}</p>
+          <div class="line"></div>
+          <div class="ingredient-flex-row-nutrition">
+            <div class="ingredient-text-nutrition">{{section.settings.product_ingredients_6}}</div>
+          </div>
+          <div class="line"></div>
+          <div class="nutrition-dropdown-full">
+            <div data-w-id="4df989f1-af7a-165b-10c8-4d4b3f27ad2d" class="nutrition-dropdown-toggle">
+              <div class="text-nutrition-wrapper">
+                <h6 style="opacity:1" class="h6-nutrition">View nutritional information</h6>
+                <h6 style="display:none;opacity:0" class="h6-nutrition-alt">Hide nutritional information</h6>
+              </div>
+              <div class="nutrition-info-btn-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/minus.svg" loading="lazy" style="opacity:0;display:none" alt="" class="nutrition-img-toggle-alt"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/plus.svg" loading="lazy" style="opacity:1" alt="" class="nutrition-img-toggle"></div>
+            </div>
+            <div   class=" nutrition-information-extend hide">
+              <div class="nutrition-col">
+                {%if section.settings.nutrition_img_6 %}
+                    <img src="{{section.settings.nutrition_img_6 | img_url: 'large' }}" loading="lazy" alt="">
+                {%endif%}
+                </div>
+              <div class="nutrition-col">
+                <p class="black-text ingredient">{{section.settings.nutrition_text_6}}</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nutrition-flex-row">
+        <div class="nutrition-img-wrapper">
+            {%if section.settings.product_img_7 %}
+                <img src="{{section.settings.product_img_7 | img_url: 'large' }}" loading="lazy" class="img-nutrition-product" alt="{{ product._img_7.alt | escape }}">
+            {%endif%}
+        </div>
+        <div class="nutrition-fact-text">
+          <h2 class="blue-text">{{section.settings.product_heading_7}}</h2>
+          <p class="black-text margin-b">{{section.settings.product_description_7}}</p>
+          <div class="line"></div>
+          <div class="ingredient-flex-row-nutrition">
+            <div class="ingredient-text-nutrition">{{section.settings.product_ingredients_7}}</div>
+          </div>
+          <div class="line"></div>
+          <div class="nutrition-dropdown-full">
+            <div data-w-id="4df989f1-af7a-165b-10c8-4d4b3f27ad2d" class="nutrition-dropdown-toggle">
+              <div class="text-nutrition-wrapper">
+                <h6 style="opacity:1" class="h6-nutrition">View nutritional information</h6>
+                <h6 style="display:none;opacity:0" class="h6-nutrition-alt">Hide nutritional information</h6>
+              </div>
+              <div class="nutrition-info-btn-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/minus.svg" loading="lazy" style="opacity:0;display:none" alt="" class="nutrition-img-toggle-alt"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/plus.svg" loading="lazy" style="opacity:1" alt="" class="nutrition-img-toggle"></div>
+            </div>
+            <div   class=" nutrition-information-extend hide">
+              <div class="nutrition-col">
+                {%if section.settings.nutrition_img_7 %}
+                    <img src="{{section.settings.nutrition_img_7 | img_url: 'large' }}" loading="lazy" alt="">
+                {%endif%}
+                </div>
+              <div class="nutrition-col">
+                <p class="black-text ingredient">{{section.settings.nutrition_text_7}}</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nutrition-flex-row">
+        <div class="nutrition-img-wrapper">
+            {%if section.settings.product_img_8 %}
+                <img src="{{section.settings.product_img_8 | img_url: 'large' }}" loading="lazy" class="img-nutrition-product" alt="{{ product_img_8.alt | escape }}">
+            {%endif%}
+        </div>
+        <div class="nutrition-fact-text">
+          <h2 class="blue-text">{{section.settings.product_heading_8}}</h2>
+          <p class="black-text margin-b">{{section.settings.product_description_8}}</p>
+          <div class="line"></div>
+          <div class="ingredient-flex-row-nutrition">
+            <div class="ingredient-text-nutrition">{{section.settings.product_ingredients_8}}</div>
+          </div>
+          <div class="line"></div>
+          <div class="nutrition-dropdown-full">
+            <div data-w-id="4df989f1-af7a-165b-10c8-4d4b3f27ad2d" class="nutrition-dropdown-toggle">
+              <div class="text-nutrition-wrapper">
+                <h6 style="opacity:1" class="h6-nutrition">View nutritional information</h6>
+                <h6 style="display:none;opacity:0" class="h6-nutrition-alt">Hide nutritional information</h6>
+              </div>
+              <div class="nutrition-info-btn-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/minus.svg" loading="lazy" style="opacity:0;display:none" alt="" class="nutrition-img-toggle-alt"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/plus.svg" loading="lazy" style="opacity:1" alt="" class="nutrition-img-toggle"></div>
+            </div>
+            <div   class=" nutrition-information-extend hide">
+              <div class="nutrition-col">
+                {%if section.settings.nutrition_img_8 %}
+                    <img src="{{section.settings.nutrition_img_8 | img_url: 'large' }}" loading="lazy" alt="">
+                {%endif%}
+                </div>
+              <div class="nutrition-col">
+                <p class="black-text ingredient">{{section.settings.nutrition_text_8}}</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nutrition-flex-row">
+        <div class="nutrition-img-wrapper">
+            {%if section.settings.product_img_9 %}
+                <img src="{{section.settings.product_img_9 | img_url: 'large' }}" loading="lazy" class="img-nutrition-product" alt="{{ product_9_img.alt | escape }}">
+            {%endif%}
+        </div>
+        <div class="nutrition-fact-text">
+          <h2 class="blue-text">{{section.settings.product_heading_9}}</h2>
+          <p class="black-text margin-b">{{section.settings.product_description_9}}</p>
+          <div class="line"></div>
+          <div class="ingredient-flex-row-nutrition">
+            <div class="ingredient-text-nutrition">{{section.settings.product_ingredients_9}}</div>
+          </div>
+          <div class="line"></div>
+          <div class="nutrition-dropdown-full">
+            <div data-w-id="4df989f1-af7a-165b-10c8-4d4b3f27ad2d" class="nutrition-dropdown-toggle">
+              <div class="text-nutrition-wrapper">
+                <h6 style="opacity:1" class="h6-nutrition">View nutritional information</h6>
+                <h6 style="display:none;opacity:0" class="h6-nutrition-alt">Hide nutritional information</h6>
+              </div>
+              <div class="nutrition-info-btn-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/minus.svg" loading="lazy" style="opacity:0;display:none" alt="" class="nutrition-img-toggle-alt"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/plus.svg" loading="lazy" style="opacity:1" alt="" class="nutrition-img-toggle"></div>
+            </div>
+            <div   class=" nutrition-information-extend hide">
+              <div class="nutrition-col">
+                {%if section.settings.nutrition_img_9 %}
+                    <img src="{{section.settings.nutrition_img_9 | img_url: 'large' }}" loading="lazy" alt="">
+                {%endif%}
+                </div>
+              <div class="nutrition-col">
+                <p class="black-text ingredient">{{section.settings.nutrition_text_9}}</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nutrition-flex-row">
+        <div class="nutrition-img-wrapper">
+            {%if section.settings.product_img_10 %}
+                <img src="{{section.settings.product_img_10 | img_url: 'large' }}" loading="lazy" class="img-nutrition-product" alt="{{ product_img_10.alt | escape }}">
+            {%endif%}
+        </div>
+        <div class="nutrition-fact-text">
+          <h2 class="blue-text">{{section.settings.product_heading_10}}</h2>
+          <p class="black-text margin-b">{{section.settings.product_description_10}}</p>
+          <div class="line"></div>
+          <div class="ingredient-flex-row-nutrition">
+            <div class="ingredient-text-nutrition">{{section.settings.product_ingredients_10}}</div>
+          </div>
+          <div class="line"></div>
+          <div class="nutrition-dropdown-full">
+            <div data-w-id="4df989f1-af7a-165b-10c8-4d4b3f27ad2d" class="nutrition-dropdown-toggle">
+              <div class="text-nutrition-wrapper">
+                <h6 style="opacity:1" class="h6-nutrition">View nutritional information</h6>
+                <h6 style="display:none;opacity:0" class="h6-nutrition-alt">Hide nutritional information</h6>
+              </div>
+              <div class="nutrition-info-btn-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/minus.svg" loading="lazy" style="opacity:0;display:none" alt="" class="nutrition-img-toggle-alt"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/plus.svg" loading="lazy" style="opacity:1" alt="" class="nutrition-img-toggle"></div>
+            </div>
+            <div   class=" nutrition-information-extend hide">
+              <div class="nutrition-col">
+                {%if section.settings.nutrition_img_10 %}
+                    <img src="{{section.settings.nutrition_img_10 | img_url: 'large' }}" loading="lazy" alt="">
+                {%endif%}
+                </div>
+              <div class="nutrition-col">
+                <p class="black-text ingredient">{{section.settings.nutrition_text_10}}</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nutrition-flex-row">
+        <div class="nutrition-img-wrapper">
+            {%if section.settings.product_img_11 %}
+                <img src="{{section.settings.product_img_11 | img_url: 'large' }}" loading="lazy" class="img-nutrition-product" alt="{{ product_img_11.alt | escape }}">
+            {%endif%}
+        </div>
+        <div class="nutrition-fact-text">
+          <h2 class="blue-text">{{section.settings.product_heading_11}}</h2>
+          <p class="black-text margin-b">{{section.settings.product_description_11}}</p>
+          <div class="line"></div>
+          <div class="ingredient-flex-row-nutrition">
+            <div class="ingredient-text-nutrition">{{section.settings.product_ingredients_11}}</div>
+          </div>
+          <div class="line"></div>
+          <div class="nutrition-dropdown-full">
+            <div data-w-id="4df989f1-af7a-165b-10c8-4d4b3f27ad2d" class="nutrition-dropdown-toggle">
+              <div class="text-nutrition-wrapper">
+                <h6 style="opacity:1" class="h6-nutrition">View nutritional information</h6>
+                <h6 style="display:none;opacity:0" class="h6-nutrition-alt">Hide nutritional information</h6>
+              </div>
+              <div class="nutrition-info-btn-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/minus.svg" loading="lazy" style="opacity:0;display:none" alt="" class="nutrition-img-toggle-alt"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/plus.svg" loading="lazy" style="opacity:1" alt="" class="nutrition-img-toggle"></div>
+            </div>
+            <div   class=" nutrition-information-extend hide">
+              <div class="nutrition-col">
+                {%if section.settings.nutrition_img_11 %}
+                    <img src="{{section.settings.nutrition_img_11 | img_url: 'large' }}" loading="lazy" alt="{{ nutrition_img_11.alt | escape }}">
+                {%endif%}
+                </div>
+              <div class="nutrition-col">
+                <p class="black-text ingredient">{{section.settings.nutrition_text_11}}</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bottom-text-nutrition">
+        <p class="grey-text">While we do our best to keep all nutrition facts updated, products may change from time to time and we recommend that you check the package for the most updated version. We will always ensure that any allergens are always accurate.</p>
+        <p class="grey-text">2,000 calories a day is used for general nutrition advice, but calorie needs may vary.</p>
+        <p class="grey-text">*Calorie counts are per serving. Serving sizes are based on one (1) ounce which is the typical amount consumed at one time.</p>
+        <p class="grey-text">Bio-Engineered Statement: Some ingredients in our products may be derived from genetically engineered plants.</p>
+        <p class="grey-text"><em>For other allergy or nutritional information, please contact us at <br>‍</em>
+          <a href="mailto:nutrition@FunkyChunky.com" class="grey-black-link">nutrition@FunkyChunky.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  {% schema %}
+  {
+    "name": "Product Nutrition Section" ,
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "product_img_1",
+            "label": "Product Image 1"
+        },
+        {
+           "type": "text",
+           "id": "product_heading_1",
+           "default": "CHOCOLATE PRETZEL",
+           "label": "Product Title 1"
+        },
+        {
+           "type": "text",
+           "id": "product_ingredients_1",
+           "default": "Pretzels  |  Pecans  |  Caramel  |  Chocolatey Drizzle",
+           "label": "Product Ingredients 1"
+        },
+        {
+           "type": "text",
+           "id": "product_description_1",
+           "default": "Crunchy, salty pretzels laced with chewy, gooey caramel and a ton of chocolatey decadence make our Chocolate Pretzel mix so outright irresistible!",
+           "label": "Product Description 1"
+        },
+        {
+            "type": "image_picker",
+            "id": "nutrition_img_1",
+            "label": "Nutrition Image 1"
+        },
+        {
+            "type": "richtext",
+            "id": "nutrition_text_1",
+            "label": "Nutrition Text 1"
+        },
+        {
+            "type": "image_picker",
+            "id": "product_img_2",
+            "label": "Product Image 2"
+        },
+        {
+            "type": "text",
+            "id": "product_heading_2",
+            "default": "CHOCOLATE PRETZEL",
+            "label": "Product Title 2"
+         },
+         {
+            "type": "text",
+            "id": "product_ingredients_2",
+            "default": "Pretzels  |  Pecans  |  Caramel  |  Chocolatey Drizzle",
+            "label": "Product Ingredients 2"
+         },
+         {
+            "type": "text",
+            "id": "product_description_2",
+            "default": "Crunchy, salty pretzels laced with chewy, gooey caramel and a ton of chocolatey decadence make our Chocolate Pretzel mix so outright irresistible!",
+            "label": "Product Description 2"
+         },
+         {
+             "type": "image_picker",
+             "id": "nutrition_img_2",
+             "label": "Nutrition Image 2"
+         },
+         {
+             "type": "richtext",
+             "id": "nutrition_text_2",
+             "label": "Nutrition Text 2"
+         },
+         {
+            "type": "image_picker",
+            "id": "product_img_3",
+            "label": "Product Image 3"
+        },
+         {
+            "type": "text",
+            "id": "product_heading_3",
+            "default": "CHOCOLATE PRETZEL",
+            "label": "Product Title 3"
+         },
+         {
+            "type": "text",
+            "id": "product_ingredients_3",
+            "default": "Pretzels  |  Pecans  |  Caramel  |  Chocolatey Drizzle",
+            "label": "Product Ingredients 3"
+         },
+         {
+            "type": "text",
+            "id": "product_description_3",
+            "default": "Crunchy, salty pretzels laced with chewy, gooey caramel and a ton of chocolatey decadence make our Chocolate Pretzel mix so outright irresistible!",
+            "label": "Product Description 3"
+         },
+         {
+             "type": "image_picker",
+             "id": "nutrition_img_3",
+             "label": "Nutrition Image 3"
+         },
+         {
+             "type": "richtext",
+             "id": "nutrition_text_3",
+             "label": "Nutrition Text 3"
+         },
+         {
+            "type": "image_picker",
+            "id": "product_img_4",
+            "label": "Product Image 4"
+        },
+         {
+            "type": "text",
+            "id": "product_heading_4",
+            "default": "CHOCOLATE PRETZEL",
+            "label": "Product Title 4"
+         },
+         {
+            "type": "text",
+            "id": "product_ingredients_4",
+            "default": "Pretzels  |  Pecans  |  Caramel  |  Chocolatey Drizzle",
+            "label": "Product Ingredients 4"
+         },
+         {
+            "type": "text",
+            "id": "product_description_4",
+            "default": "Crunchy, salty pretzels laced with chewy, gooey caramel and a ton of chocolatey decadence make our Chocolate Pretzel mix so outright irresistible!",
+            "label": "Product Description 4"
+         },
+         {
+             "type": "image_picker",
+             "id": "nutrition_img_4",
+             "label": "Nutrition Image 4"
+         },
+         {
+             "type": "richtext",
+             "id": "nutrition_text_4",
+             "label": "Nutrition Text 4"
+         },
+         {
+            "type": "image_picker",
+            "id": "product_img_5",
+            "label": "Product Image 5"
+        },
+         {
+            "type": "text",
+            "id": "product_heading_5",
+            "default": "CHOCOLATE PRETZEL",
+            "label": "Product Title 5"
+         },
+         {
+            "type": "text",
+            "id": "product_ingredients_5",
+            "default": "Pretzels  |  Pecans  |  Caramel  |  Chocolatey Drizzle",
+            "label": "Product Ingredients 5"
+         },
+         {
+            "type": "text",
+            "id": "product_description_5",
+            "default": "Crunchy, salty pretzels laced with chewy, gooey caramel and a ton of chocolatey decadence make our Chocolate Pretzel mix so outright irresistible!",
+            "label": "Product Description 5"
+         },
+         {
+             "type": "image_picker",
+             "id": "nutrition_img_5",
+             "label": "Nutrition Image 5"
+         },
+         {
+             "type": "richtext",
+             "id": "nutrition_text_5",
+             "label": "Nutrition Text 5"
+         },
+         {
+            "type": "image_picker",
+            "id": "product_img_6",
+            "label": "Product Image 6"
+        },
+         {
+            "type": "text",
+            "id": "product_heading_6",
+            "default": "CHOCOLATE PRETZEL",
+            "label": "Product Title 6"
+         },
+         {
+            "type": "text",
+            "id": "product_ingredients_6",
+            "default": "Pretzels  |  Pecans  |  Caramel  |  Chocolatey Drizzle",
+            "label": "Product Ingredients 6"
+         },
+         {
+            "type": "text",
+            "id": "product_description_6",
+            "default": "Crunchy, salty pretzels laced with chewy, gooey caramel and a ton of chocolatey decadence make our Chocolate Pretzel mix so outright irresistible!",
+            "label": "Product Description 6"
+         },
+         {
+             "type": "image_picker",
+             "id": "nutrition_img_6",
+             "label": "Nutrition Image 6"
+         },
+         {
+             "type": "richtext",
+             "id": "nutrition_text_6",
+             "label": "Nutrition Text 6"
+         },
+         {
+            "type": "image_picker",
+            "id": "product_img_7",
+            "label": "Product Image 7"
+        },
+         {
+            "type": "text",
+            "id": "product_heading_7",
+            "default": "CHOCOLATE PRETZEL",
+            "label": "Product Title 7"
+         },
+         {
+            "type": "text",
+            "id": "product_ingredients_7",
+            "default": "Pretzels  |  Pecans  |  Caramel  |  Chocolatey Drizzle",
+            "label": "Product Ingredients 7"
+         },
+         {
+            "type": "text",
+            "id": "product_description_7",
+            "default": "Crunchy, salty pretzels laced with chewy, gooey caramel and a ton of chocolatey decadence make our Chocolate Pretzel mix so outright irresistible!",
+            "label": "Product Description 7"
+         },
+         {
+             "type": "image_picker",
+             "id": "nutrition_img_7",
+             "label": "Nutrition Image 7"
+         },
+         {
+             "type": "richtext",
+             "id": "nutrition_text_7",
+             "label": "Nutrition Text 7"
+         },
+         {
+            "type": "image_picker",
+            "id": "product_img_8",
+            "label": "Product Image 8"
+        },
+         {
+            "type": "text",
+            "id": "product_heading_8",
+            "default": "CHOCOLATE PRETZEL",
+            "label": "Product Title 8"
+         },
+         {
+            "type": "text",
+            "id": "product_ingredients_8",
+            "default": "Pretzels  |  Pecans  |  Caramel  |  Chocolatey Drizzle",
+            "label": "Product Ingredients 8"
+         },
+         {
+            "type": "text",
+            "id": "product_description_8",
+            "default": "Crunchy, salty pretzels laced with chewy, gooey caramel and a ton of chocolatey decadence make our Chocolate Pretzel mix so outright irresistible!",
+            "label": "Product Description 8"
+         },
+         {
+             "type": "image_picker",
+             "id": "nutrition_img_8",
+             "label": "Nutrition Image 8"
+         },
+         {
+             "type": "richtext",
+             "id": "nutrition_text_8",
+             "label": "Nutrition Text 8"
+         },
+         {
+            "type": "image_picker",
+            "id": "product_img_9",
+            "label": "Product Image 9"
+        },
+         {
+            "type": "text",
+            "id": "product_heading_9",
+            "default": "CHOCOLATE PRETZEL",
+            "label": "Product Title 9"
+         },
+         {
+            "type": "text",
+            "id": "product_ingredients_9",
+            "default": "Pretzels  |  Pecans  |  Caramel  |  Chocolatey Drizzle",
+            "label": "Product Ingredients 9"
+         },
+         {
+            "type": "text",
+            "id": "product_description_9",
+            "default": "Crunchy, salty pretzels laced with chewy, gooey caramel and a ton of chocolatey decadence make our Chocolate Pretzel mix so outright irresistible!",
+            "label": "Product Description 9"
+         },
+         {
+             "type": "image_picker",
+             "id": "nutrition_img_9",
+             "label": "Nutrition Image 9"
+         },
+         {
+             "type": "richtext",
+             "id": "nutrition_text_9",
+             "label": "Nutrition Text 9"
+         },
+         {
+            "type": "image_picker",
+            "id": "product_img_10",
+            "label": "Product Image 10"
+        },
+         {
+            "type": "text",
+            "id": "product_heading_10",
+            "default": "CHOCOLATE PRETZEL",
+            "label": "Product Title 10"
+         },
+         {
+            "type": "text",
+            "id": "product_ingredients_10",
+            "default": "Pretzels  |  Pecans  |  Caramel  |  Chocolatey Drizzle",
+            "label": "Product Ingredients 10"
+         },
+         {
+            "type": "text",
+            "id": "product_description_10",
+            "default": "Crunchy, salty pretzels laced with chewy, gooey caramel and a ton of chocolatey decadence make our Chocolate Pretzel mix so outright irresistible!",
+            "label": "Product Description 10"
+         },
+         {
+             "type": "image_picker",
+             "id": "nutrition_img_10",
+             "label": "Nutrition Image 10"
+         },
+         {
+             "type": "richtext",
+             "id": "nutrition_text_10",
+             "label": "Nutrition Text 10"
+         },
+         {
+            "type": "image_picker",
+            "id": "product_img_11",
+            "label": "Product Image 11"
+        },
+         {
+            "type": "text",
+            "id": "product_heading_11",
+            "default": "CHOCOLATE PRETZEL",
+            "label": "Product Title 11"
+         },
+         {
+            "type": "text",
+            "id": "product_ingredients_11",
+            "default": "Pretzels  |  Pecans  |  Caramel  |  Chocolatey Drizzle",
+            "label": "Product Ingredients 11"
+         },
+         {
+            "type": "text",
+            "id": "product_description_11",
+            "default": "Crunchy, salty pretzels laced with chewy, gooey caramel and a ton of chocolatey decadence make our Chocolate Pretzel mix so outright irresistible!",
+            "label": "Product Description 11"
+         },
+         {
+             "type": "image_picker",
+             "id": "nutrition_img_11",
+             "label": "Nutrition Image 11"
+         },
+         {
+             "type": "richtext",
+             "id": "nutrition_text_11",
+             "label": "Nutrition Text 11"
+         }
+
+       
+    ]
+  }
+  {% endschema %}

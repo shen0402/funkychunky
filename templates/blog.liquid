@@ -1,0 +1,144 @@
+{% comment %}
+  The contents of the blog.liquid template can be found in /sections/blog-template.liquid
+
+
+{% section 'blog-template' %}
+{% endcomment %}
+
+{% comment %} //////////////// Tag Example ///////////////////////////////
+<a href="{{ blog.url }}/tagged/news-articles#main-content" class="sub-hero-link-blog w-inline-block">
+  <div>News Articles</div>
+</a>
+{% endcomment %}
+
+
+{% comment %} ///////////////// blog object examples ///////////////////////////
+<div class="flex-col-img-holder-blog" {% if article.image %}style="background-image: url({{ article.image | img_url: '800x' }});"{% endif %}></div>
+
+{{ article.published_at | time_tag: format: 'date' }}
+{{ article.title | escape }}
+
+
+<select id="blog-category-filter" name="blog-category-filter" class="filter-input-category filter-input-category-blog w-select">
+    <option value="none">Choose a Category</option>
+    <option value="{{ blog.url }}">All</option>
+  {%- for tag in blog.tags -%}
+    <option value="{{ blog.url }}/tagged/{{ tag | handleize }}">{{tag}}</option>
+  {% endfor %}
+</select>
+
+{% endcomment %}
+
+    
+
+
+
+<div class="general-hero-section">
+  {%comment%}
+  <div class="about-hero-black-back">
+    <div class="about-hero-text-wrapper blog">
+      <h5 class="all-caps white-text">blog</h5>
+      <h1 class="no-margin-b">follow what&#x27;s poppin!</h1>
+    </div>
+  </div>
+{% endcomment %}
+  <div class="about-hero-img-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/splash-secondary-blue.svg" loading="lazy" alt="" class="img-hero"></div>
+</div>
+<div id="w-node-_8fbbc85c-f730-2ab9-bc51-a1f3f6b53230-d67db6f3" class="white-section last-element">
+  <div class="general-white-front top-flat no-padding-t">
+
+    <div class="about-hero-text-wrapper">
+      <h1 class="black-heading">SEE WHAT'S POPPIN!</h1>
+    </div>
+
+      {% for article in blogs.news.articles %}
+        {% if article.tags contains "Featured" %}
+      
+          <div class="blog-featured">
+            <div class="blog-featured-text-wrapper">
+              <p class="black-text smaller italic-text">{{ article.published_at | time_tag: format: 'date' }}</p>
+              <h2 class="black-text no-margin-t">{{ article.title | escape }}</h2>
+              <p class="black-text">{{ article.excerpt }}</p>
+              <div class="line bright-blue-blog featured"></div>
+                <a href="{{ article.url }}" class="blog-link black-text smaller">READ MORE</a>
+            </div>
+            <div class="blog-featured-img-wrapper" {% if article.image %}style="background-image: url({{ article.image | img_url: '800x' }});"{% endif %}></div>
+          </div>
+
+        {% endif %}
+      {%- endfor -%}
+        
+    
+      {% paginate blog.articles by 12 %}
+    <div class="blog-all-articles-grid">
+
+    
+        {% for article in blog.articles %}
+
+
+          <div class="blog-individual">
+            <a href="{{ article.url }}"  aria-label="Read {{ article.title | escape }}">
+              <div class="blog-individual-img-wrapper" {% if article.image %}style="background-image: url({{ article.image | img_url: '800x' }});"{% endif %}></div>
+            </a>
+            <div class="blog-individual-text-wrapper">
+
+              <p class="black-text smaller italic-text">{{ article.published_at | time_tag: format: 'date' }}</p>
+              <a href="{{ article.url }}" class="article-text-link">
+                <h2 class="black-text no-margin-t">	{{ article.title | escape }}</h2>
+              </a>
+              {% if article.excerpt %}
+                <p class="black-text">{{ article.excerpt }}</p>
+              {% endif %}
+              <div class="line bright-blue-blog"></div>
+                <a href="{{ article.url }}" class="blog-link black-text smaller">READ MORE<span class="sr-only"> about {{ article.title }}</a>
+            
+            </div>
+
+          </div>
+
+       
+        {% endfor %}
+    
+    
+        
+        
+      </div>
+      <div class="paginate-container">
+        {% if paginate.pages > 1 %}
+          {% include 'pagination' %}
+        {% endif %}
+      </div>
+      {% endpaginate %}
+  
+
+    
+  </div>
+</div>
+<div class="black-back-section relative hidden">
+  <div class="form-fundraiser-wrapper">
+    <h5 class="all-caps white-text">drink the kool-aid</h5>
+    <h1 class="no-margin-b">SIGN UP AND SAVE!</h1>
+    <p>Sign up for the latest Funky Chunky updates, promotions, and new product releases to receive a 15% off funkychunky.com code!</p>
+
+
+    <div class="form-imbed-wrapper">
+      <div class="form-imbed-container">
+        <div class="klaviyo-form-XGGm8U"></div>
+      </div>
+    </div>
+    {%comment%}
+    <div class="signup-form w-form">
+      <form id="wf-form-Sign-up-and-save" name="wf-form-Sign-up-and-save" data-name="Sign up and save" method="get"><input type="email" class="general-text-field w-input" maxlength="256" name="Email-Address" data-name="Email Address" placeholder="Email Address*" id="Email-Address" required="">
+        <div class="flex-form"><input type="text" class="general-text-field flex w-input" maxlength="256" name="First-Name" data-name="First Name" placeholder="First Name*" id="First-Name" required=""><input type="email" class="general-text-field flex w-input" maxlength="256" name="Last-Name" data-name="Last Name" placeholder="Last Name*" id="Last-Name" required=""></div><input type="submit" value="Submit" data-wait="Please wait..." class="general-btn w-button">
+      </form>
+      <div class="w-form-done">
+        <div>Thank you! Your submission has been received!</div>
+      </div>
+      <div class="w-form-fail">
+        <div>Oops! Something went wrong while submitting the form.</div>
+      </div>
+    </div>
+    {%endcomment%}
+  </div>
+  <div class="absolute-form-discount-img"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-pretz2-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-pretz2-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-pretz2-min-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-pretz2-min-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-pretz2-min.png 1200w" sizes="(max-width: 991px) 25vw, (max-width: 4000px) 30vw, 1200px" alt="" class="img-absolute"></div>
+</div>

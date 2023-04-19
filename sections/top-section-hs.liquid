@@ -1,0 +1,37 @@
+<div class="general-hero-section">
+    <div class="about-hero-black-back">
+      <div class="about-hero-text-wrapper hs">
+        <img class="top-hero-img" src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/2020-08-10-stern.png?v=1663010364">
+        <h5 class="all-caps white-text">{{section.settings.sub_heading}}</h5>
+        <h1 class="no-margin-b">{{section.settings.main_heading}}</h1>
+        
+        <p>Use code <strong>100</strong> for 15% off your next order!</p>
+        <a href="https://funkychunky.com/pages/shop-all" class="general-btn w-button extra-margin">Use Code Now</a>
+        <p>Interested in a large order for the holidays?</p>
+        <a href="https://funkychunkygifts.com/#corprate_gifting" class="general-btn margin-t w-button">Start Here</a>
+      </div>
+      <div class="top-right-shop-img"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-pretz2-min_1.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-pretz2-min_1-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-pretz2-min_1-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-pretz2-min_1-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-pretz2-min_1.png 1200w" sizes="(max-width: 3428px) 35vw, 1200px" alt="" class="img-absolute"></div>
+      <div class="top-left-shop-img"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-popcorn2-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-popcorn2-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-popcorn2-min-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-popcorn2-min-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-popcorn2-min.png 1200w" sizes="(max-width: 4800px) 25vw, 1200px" alt="" class="img-absolute shop"></div>
+    </div>
+    <div class="about-hero-img-wrapper mo-margin-t"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/splash-secondary-pink.svg" loading="lazy" alt="" class="img-hero hs"></div>
+</div>
+
+{% schema %}
+{
+"name": "Howard Stern Page Title" ,
+"settings": [
+    {
+     "label": "Sub Heading",
+     "id": "sub_heading",
+     "default": "shop all",
+     "type": "text"
+    }, 
+    {
+     "label": "Main Heading",
+     "id": "main_heading",
+     "default": "CHOCOLATEY, CARAMELY, NUTTY GOURMET POPCORN",
+     "type": "text"
+    }
+]
+}
+{% endschema %}

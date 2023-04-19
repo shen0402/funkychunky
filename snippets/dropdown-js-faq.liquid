@@ -1,0 +1,23 @@
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+<script>
+    $(document).ready(function() {
+        $(".faq-upper").on('click', 
+        function() {
+            
+          if ($(this).siblings(".faq-expand").hasClass('hide')==true)
+          {
+            $(this).siblings(".faq-expand").removeClass("hide");
+            $(this).children(".faq-img").addClass("rotate");
+            
+            
+            
+          }
+          else
+          $(this).siblings(".faq-expand").addClass("hide");
+          
+        });
+    });
+
+      </script>

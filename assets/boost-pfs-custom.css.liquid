@@ -1,0 +1,121 @@
+/*********************** Custom CSS for Boost Filter & Search  ************************/
+{% assign breakpointMobile = '767px' %}
+{% assign breakpointTabletMin = '768px' %}
+{% assign breakpointTabletMax = '1199px' %}
+{% assign breakpointDesktop = '1200px' %}
+{% assign searchBoxMobileHeight = '64px' %}
+
+/* LABEL */
+
+.boost-pfs-filter-product-item-label {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	padding: 10px;
+	margin: 0px;
+	letter-spacing: 0;
+}
+
+.boost-pfs-filter-product-item-label .boost-pfs-label,
+.boost-pfs-filter-product-item-label .boost-pfs-filter-label {
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 2px 10px 1px;
+	background: #fff;
+	left: auto;
+	border: 1px solid transparent;
+	vertical-align: top;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+}
+
+.boost-pfs-filter-product-item-label .boost-pfs-label:first-child,
+.boost-pfs-filter-product-item-label .boost-pfs-filter-label:first-child {
+	margin-left: 0;
+    background-color: #000;
+    color: #fff;
+    padding-bottom: 3px;
+    font-weight: 700;
+}
+
+.boost-pfs-filter-product-item-title{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: alternate-gothic-no-1-d,sans-serif;
+    color: #000;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.boost-pfs-filter-products{
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: auto;
+    margin-bottom: 10vw;
+    margin-left: auto;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    justify-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+
+    flex-direction: row;
+}
+.boost-pfs-filter-product-item.boost-pfs-filter-product-item-grid.boost-pfs-filter-grid-width-4.boost-pfs-filter-grid-width-mb-2{
+    width: 30%;
+    margin-top: 20px;
+}
+.boost-pfs-filter-product-item-image-link{
+    padding-top: 40px !important;
+}
+
+@media screen and (max-width: 767px) {
+    .boost-pfs-filter-product-item.boost-pfs-filter-product-item-grid.boost-pfs-filter-grid-width-4.boost-pfs-filter-grid-width-mb-2{
+        width: 50%;
+        padding: 0 5px;
+        
+        
+    }
+    .boost-pfs-filter-product-bottom{
+        min-height: 200px;
+    }
+    
+    .boost-pfs-filter-product-bottom-inner{
+        min-height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+}
+
+@media screen and (max-width: 479px) {
+    .boost-pfs-filter-product-item.boost-pfs-filter-product-item-grid.boost-pfs-filter-grid-width-4.boost-pfs-filter-grid-width-mb-2{
+        width: 50%;
+        
+    }
+    .boost-pfs-filter-product-bottom{
+        min-height: auto;
+      }
+
+}
+
+.boost-pfs-filter-product-item-label {
+    position: static;
+}

@@ -1,0 +1,17 @@
+
+<div class="boost-pfs-filter-collection-header-wrapper boost-pfs-filter-collection-image {% if collection.image and show_collection_image %}boost-pfs-filter-collection-has-image{% endif %}" {% if collection.image and show_collection_image %} style="background-image: url({{ collection.image | img_url: '2048x600', crop: 'top' }});" {% endif %}>
+	<div class="boost-pfs-container-default-{{ layout_type }}">
+		<div class="boost-pfs-section-header">
+			<h1 class="boost-pfs-filter-collection-header">
+				<span>
+					{{ collection.title }}
+				</span>
+			</h1>
+			{%- if show_collection_des == true and collection.description != blank -%}
+			<div class="boost-pfs-filter-collection-description rte">
+				{{ collection.description }}
+			</div>
+			{%- endif -%}
+		</div>
+	</div>
+</div>

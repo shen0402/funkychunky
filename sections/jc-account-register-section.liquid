@@ -1,0 +1,36 @@
+<div class="general-white-front top-flat">
+    <div class="login-wrapper">
+      <div class="login-content">
+        <div class="fc-logo"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/fc-mark.svg" loading="lazy" alt=""></div>
+        <h1 class="black-text no-margin-b">create account</h1>
+        <div class="create-acct-form-block w-form">
+
+            {% form 'create_customer', id: 'RegisterForm' %}
+            {{ form.errors | default_errors }}
+            <input type="email" class="general-text-field w-input" maxlength="256" name="customer[email]" placeholder="email*" id="email" required="">
+            <div class="create-account-flex-row">
+                <input type="text" class="general-text-field flex w-input" maxlength="256" name="customer[first_name]" placeholder="first name*" id="first-name" required="">
+                <input type="text" class="general-text-field flex w-input" maxlength="256" name="customer[last_name]" placeholder="last name*" id="last-name" required="">
+            </div>
+
+
+
+            <input type="password" class="general-text-field w-input" maxlength="256" name="customer[password]" placeholder="Password*" id="field" required="">
+            <input type="password" class="general-text-field w-input" maxlength="256" name="customer[password_2]" placeholder="Retype Password*" id="field_2" required="">
+
+                <input type="submit" data-wait="Please wait..." value="Create Account" class="general-btn dark-with-w-text full-width w-button">
+            {% endform %}
+
+            {%comment%}
+          <div class="w-form-done">
+            <div>Thank you! Your submission has been received!</div>
+          </div>
+          <div class="w-form-fail">
+            <div>Oops! Something went wrong while submitting the form.</div>
+          </div>
+          {%endcomment%}
+        </div>
+        <div class="acct-img-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle3-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle3-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle3-min-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle3-min-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle3-min.png 1600w" sizes="(max-width: 767px) 80vw, (max-width: 991px) 63vw, (max-width: 1600px) 100vw, 1600px" alt="" class="login-img"></div>
+      </div>
+    </div>
+  </div>

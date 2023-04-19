@@ -1,0 +1,24 @@
+{%- comment -%} Please don't update this content {%- endcomment -%}
+{%- comment -%} This collection template is used to integrate boost product filter with 3rd party apps {%- endcomment -%}
+
+{% layout none %}
+{
+	"products":
+		[
+		{%- for tag in current_tags -%}
+			{
+			{%- assign product_handle = tag | handle -%}
+			{%- assign product = all_products[product_handle] -%}
+					
+			"id":{{ product.id | json }},          
+			"label": 
+				{%- capture label -%}
+				{%- include 'boost-pfs-label' -%}
+				{%- endcapture -%}
+				{{ label | json }}
+
+			}
+			{%- unless forloop.last -%},{%- endunless -%}
+		{%- endfor -%}
+		]
+}

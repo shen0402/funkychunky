@@ -1,0 +1,124 @@
+{%- capture section_settings -%}
+{
+  "currentSortBy": {{ collection.sort_by | default: collection.default_sort_by | json }},
+  "currentTags": [{% for tag in current_tags %}{{ tag | handle | json }}{% unless forloop.last %},{% endunless %}{% endfor %}],
+  "filterType": {{ section.settings.filter_type | json }},
+  "defaultLayout": {{ section.settings.default_view_layout | json }},
+  "defaultProductsPerPage": {{ section.settings.default_products_per_page | json }},
+  "isAutomatic": {% if collection.current_vendor != blank %}true{% else %}false{% endif %},
+  "gridClasses": {{ grid_classes | json }}
+}
+{%- endcapture -%}
+
+{%- if type == 'select' -%}
+  <div class="productgrid--utils utils-sortby">
+    <label
+      class="utils-sortby-title"
+      for="product_grid_sort"
+    >
+      {{ 'product_grid.sort_by.title' | t }}
+    </label>
+
+    <button
+      class="utils-sortby-button"
+      aria-hidden="true"
+      data-productgrid-modal-sort
+      aria-label="{{ 'product_grid.sort_by.title' | t }}"
+    >
+      <span class="utils-filter-icon">
+        {% render 'icon-library', id: 'icon-sort' %}
+      </span>
+      <span class="utils-filter-text">
+        {{ 'product_grid.sort_by.title' | t }}
+      </span>
+    </button>
+
+    <div class="utils-sortby-select--wrapper form-field-select-wrapper no-label">
+      <select
+        class="
+          form-field
+          form-field-select
+          utils-sortby-select
+        "
+        id="product_grid_sort"
+        tabindex="0"
+        data-productgrid-trigger-sort>
+        {%- for option in collection.sort_options -%}
+          {% assign sort_active = false %}
+          {% if collection.sort_by == blank and collection.default_sort_by == option.value %}
+            {% assign sort_active = true %}
+          {% elsif collection.sort_by == option.value %}
+            {% assign sort_active = true %}
+          {% endif %}
+          <option value="{{ option.value }}" {% if sort_active %}selected="selected"{% endif %}>
+            {{ option.name }}
+          </option>
+          {%- endfor -%}
+          <option value="upcoming-events" {% if sort_active %}selected="selected"{% endif %}>Upcoming events</option>
+      </select>
+      {% render 'icon-chevron-down-small' %}
+    </div>
+  </div>
+{%- endif -%}
+
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                    <script>
+                      Shopify.queryParams = {};
+                      if (location.search.length) {
+                        for (var aKeyValue, i = 0, aCouples = location.search.substr(1).split('&'); i < aCouples.length; i++) {
+                          aKeyValue = aCouples[i].split('=');
+                          if (aKeyValue.length > 1) {
+                            console.log(aKeyValue);
+                            Shopify.queryParams[decodeURIComponent(aKeyValue[0])] = decodeURIComponent(aKeyValue[1]);
+                          }
+                        }
+                      }
+                
+                      $(function() {
+                        $('#SortBy')
+                          .val('{{ collection.sort_by | default: 'upcoming-events' }}')
+                          .bind('change', function() {
+                            Shopify.queryParams.sort_by = jQuery(this).val();
+                            console.log(Shopify.queryParams);
+                            location.search = jQuery.param(Shopify.queryParams);
+                          }
+                        );
+                      });
+                    </script>
+
+{%- if type == 'modal' -%}
+  <div class="utils-sortby--modal" aria-hidden="true" data-productgrid-sort-content>
+    <span class="utils-sortby--modal-title">
+      {{ 'product_grid.sort_by.title' | t }}
+    </span>
+
+    <ul class="utils-sortby--modal-list">
+      {%- for option in collection.sort_options -%}
+        {% assign sort_active = false %}
+        {% if collection.sort_by == blank and collection.default_sort_by == option.value %}
+          {% assign sort_active = true %}
+        {% elsif collection.sort_by == option.value %}
+          {% assign sort_active = true %}
+        {% endif %}
+
+        {% assign button_class = 'utils-sortby--modal-button' %}
+        {% if sort_active %}
+          {% assign button_class = button_class | append: ' utils-sortby--modal-button--active' %}
+        {% endif %}
+
+        <li class="utils-sortby--modal-item">
+          <button
+            class="{{ button_class }}"
+            value="{{ option.value }}"
+            data-productgrid-trigger-sort-button
+            {% if sort_active %}
+              disabled
+            {% endif %}
+          >
+            {{ option.name }}
+          </button>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+{%- endif -%}

@@ -1,0 +1,35 @@
+{% comment %} SEARCH INPUT {% endcomment %}
+<div class="boost-pfs-filter-collection-header-wrapper boost-pfs-search-form-wrapper">
+	<div class="boost-pfs-search-container boost-pfs-container-default-{{ layout_type }}">
+		<h1 class="boost-pfs-search-result-header"></h1>
+		<form class="boost-pfs-search-form" action="{{ routes.search_url }}" method="get" role="search">
+			<input class="boost-pfs-search-input" type="search" name="q" value="{{ search.terms | escape }}">
+      <button type="button" class="boost-pfs-search-form-btn-clear" aria-label="Reset">
+        <svg aria-hidden="true" width="15" height="16" viewBox="0 0 20 20"><path d="M11.414 10l6.293-6.293a1 1 0 10-1.414-1.414L10 8.586 3.707 2.293a1 1 0 00-1.414 1.414L8.586 10l-6.293 6.293a1 1 0 101.414 1.414L10 11.414l6.293 6.293A.998.998 0 0018 17a.999.999 0 00-.293-.707L11.414 10z" fill="#222222"></path></svg>
+      </button>
+			<button type="submit" class="boost-pfs-search-btn" aria-label="Submit"></button>
+		</form>
+	</div>
+</div>
+{% comment %} END SEARCH INPUT {% endcomment %}
+
+{% comment %} SEARCH RESULT TOOLBAR {% endcomment %}
+<div class="boost-pfs-container-default-{{ layout_type }}">
+  <div class="boost-pfs-search-result-toolbar">
+    <div class="boost-pfs-filter-default-toolbar-inner">
+      <div class="boost-pfs-search-result-item">
+        <ul class="boost-pfs-search-result-panel-controls">
+          <li>{% render 'boost-pfs-filter-skeleton', width: 2 %}</li>
+          <li>{% render 'boost-pfs-filter-skeleton', width: 2 %}</li>
+          <li>{% render 'boost-pfs-filter-skeleton', width: 1 %}</li>
+        </ul>
+      </div>
+      <div class="boost-pfs-search-result-item">
+        <span class="filters-toolbar__product-count boost-pfs-search-total-result">
+          {% render 'boost-pfs-filter-skeleton', width: 2 %}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+{% comment %} END SEARCH RESULT TOOLBAR {% endcomment %}

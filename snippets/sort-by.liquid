@@ -1,0 +1,10 @@
+{% if section.settings.sort_enable and collection.products.size > 0 %}
+  <div class="sort-selector">
+    <label for="sort-by">{{'collections.sorting.title' | t}}</label> 
+    <select class="sort-by" id="sort-by" data-default-sort="{{ collection.sort_by | default: collection.default_sort_by | escape }}">
+    {% for option in collection.sort_options %}
+      <option value="{{ option.value }}">{{ option.name }}</option>
+    {% endfor %}
+    </select>
+  </div>
+{% endif %}

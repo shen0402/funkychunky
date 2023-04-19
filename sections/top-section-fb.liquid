@@ -1,0 +1,37 @@
+<div class="general-hero-section">
+    <div class="about-hero-black-back">
+      <div class="about-hero-text-wrapper">
+        <h5 class="all-caps white-text">{{section.settings.sub_heading}}</h5>
+        <h1 class="no-margin-b">{{section.settings.main_heading}}</h1>
+        <p>Join our Newsletter and get 15% off your first order!</p>
+        <div class="fb-newletter-container">
+          <div class="fb-newletter-inner">
+            <div class="klaviyo-form-XGGm8U"></div>
+          </div>
+        </div>
+      </div>
+      <div class="top-right-shop-img"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-pretz2-min_1.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-pretz2-min_1-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-pretz2-min_1-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-pretz2-min_1-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-pretz2-min_1.png 1200w" sizes="(max-width: 3428px) 35vw, 1200px" alt="" class="img-absolute"></div>
+      <div class="top-left-shop-img"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-popcorn2-min.png" loading="lazy" srcset="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-popcorn2-min-p-500.png 500w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-popcorn2-min-p-800.png 800w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-popcorn2-min-p-1080.png 1080w, https://cdn.shopify.com/s/files/1/0007/4524/2681/files/drizzle-popcorn2-min.png 1200w" sizes="(max-width: 4800px) 25vw, 1200px" alt="" class="img-absolute shop"></div>
+    </div>
+    <div class="about-hero-img-wrapper"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/splash-secondary-pink.svg" loading="lazy" alt="" class="img-hero"></div>
+</div>
+
+{% schema %}
+{
+"name": "Facebook Page Title" ,
+"settings": [
+    {
+     "label": "Sub Heading",
+     "id": "sub_heading",
+     "default": "shop all",
+     "type": "text"
+    }, 
+    {
+     "label": "Main Heading",
+     "id": "main_heading",
+     "default": "CHOCOLATEY, CARAMELY, NUTTY GOURMET POPCORN",
+     "type": "text"
+    }
+]
+}
+{% endschema %}

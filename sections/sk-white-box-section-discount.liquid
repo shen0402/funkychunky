@@ -1,0 +1,131 @@
+<div class="black-back-section center bottom-rounded-down discount">
+  <h1 class="margin-b" role="heading" >{{section.settings.main_heading}}</h1>
+  {%comment%}
+    <h1>delicious categories</h1>
+    {%endcomment%}
+    <div class="categories-grid discounts">
+      
+
+      <div id="w-node-d0f47c2f-0cb9-d870-890b-2c0ea672444c-72a218a1" class="general-white-front double no-margin-t">
+      
+
+
+          <div id="w-node-d0f47c2f-0cb9-d870-890b-2c0ea6724453-72a218a1" class="classic-category-text-wrapper center fullwidth">
+            <h5 class="green-text">{{section.settings.sub_heading}}<span class="break-line"></span></h5>
+            <h1 class="black-text">{{section.settings.main_box_heading}}</h1>
+            <p class="black-text _90wid">{{section.settings.body}}</p>
+            <a href="{{section.settings.btn_url}}" class="general-btn dark-with-w-text wider w-button">{{section.settings.btn_text}}</a>
+          </div>
+
+
+          
+
+        
+      </div>
+
+      <div id="w-node-d0f47c2f-0cb9-d870-890b-2c0ea672444c-72a218a1" class="general-white-front double no-margin-t">
+    
+
+
+          <div id="w-node-d0f47c2f-0cb9-d870-890b-2c0ea672444e-72a218a1" class="categories-img-classic">
+            <h5 class="green-text">{{section.settings.sub_heading_2}}<span class="break-line"></span></h5>
+            <h1 class="black-text">{{section.settings.main_box_heading_2}}</h1>
+            <p class="black-text _90wid">{{section.settings.body_2}}</p>
+            <a href="{{section.settings.btn_url_2}}" class="general-btn dark-with-w-text wider w-button">{{section.settings.btn_text_2}}</a>
+
+            {%comment%}
+            
+                 {
+                  "label": "Right Image",
+                  "id": "right_img",
+                  
+                  "type": "image_picker"
+                }
+            <div class="categories-class-img-wrapper"><img src="{%if section.settings.right_img %}{{section.settings.right_img | image_url }}{%else%}https://cdn.shopify.com/s/files/1/0007/4524/2681/files/FC-1301-Tasting-Kit-V1b.jpg?v=1614289918{%endif%}" loading="lazy" sizes="(max-width: 479px) 84vw, (max-width: 767px) 82vw, (max-width: 991px) 83.953125px, 25vw" alt="" class="category-img"></div>
+            {%endcomment%}
+          </div>
+
+      
+      </div>
+
+      
+
+
+
+
+    </div>
+  </div>
+
+  
+{% schema %}
+{
+"name": "Text and Image Section" ,
+"settings": [
+  {
+    "label": "Main Heading",
+    "id": "main_heading",
+    "default": "CURRENT PROMOTIONS",
+    "type": "text"
+   },
+    {
+     "label": "Sub Heading",
+     "id": "sub_heading",
+     "default": "ORDERS OVER $75",
+     "type": "text"
+    }, 
+    {
+     "label": "Main Box Heading",
+     "id": "main_box_heading",
+     "default": "FREE SHIPPING",
+     "type": "text"
+    },
+    {
+      "label": "Body Text",
+      "id": "body",
+      "default": "To receive the free shipping discount, please note that your cart subtotal total must exceed $75 after all other promotions are applied.",
+      "type": "text"
+     },
+     {
+      "label": "Button URL",
+      "id": "btn_url",
+      "type": "url"
+     },
+     {
+      "label": "Button Text",
+      "id": "btn_text",
+      "default": "SHOP NOW",
+      "type": "text"
+     },
+
+     {
+      "label": "Sub Heading",
+      "id": "sub_heading_2",
+      "default": "ORDERS OVER $75",
+      "type": "text"
+     }, 
+     {
+      "label": "Main Box Heading",
+      "id": "main_box_heading_2",
+      "default": "FREE SHIPPING",
+      "type": "text"
+     },
+     {
+       "label": "Body Text",
+       "id": "body_2",
+       "default": "To receive the free shipping discount, please note that your cart subtotal total must exceed $75 after all other promotions are applied.",
+       "type": "text"
+      },
+      {
+       "label": "Button URL",
+       "id": "btn_url_2",
+       "type": "url"
+      },
+      {
+       "label": "Button Text",
+       "id": "btn_text_2",
+       "default": "SHOP NOW",
+       "type": "text"
+      }
+]
+}
+{% endschema %}

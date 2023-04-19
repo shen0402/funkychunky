@@ -1,0 +1,29 @@
+{%- comment -%} TOOLBAR {%- endcomment -%}
+<div class="boost-pfs-container-default-{{ layout_type }} boost-pfs-search-panel-product-show boost-pfs-filter-in-collection-search-hide">
+  <div class="boost-pfs-filter-default-toolbar {% if enable_filter_tree_button_desktop and enable_filter_sticky_d  %} boost-pfs-filter-tree-desktop-button-sticky-wrapper {% endif %} {% if show_view_as_m == false %} boost-pfs-filter-toolbar-top-mobile-hide-view-as {% endif %} {% if show_product_count_m == false %} boost-pfs-filter-toolbar-top-mobile-hide-product-count {% endif %}">
+    {% if show_view_as == true or show_product_count == true or show_sort_by == true or show_view_as_m == true or show_product_count_m == true %}
+      <div class="boost-pfs-filter-default-toolbar-inner">
+        {% if show_view_as == true or show_view_as_m == true or enable_filter_tree_button_desktop == true %}
+          <div class="boost-pfs-filter-toolbar-item boost-pfs-filter-toolbar-type boost-pfs-filter-{{ view_as_type }} {% if show_view_as == true or enable_filter_tree_button_desktop == true  %} boost-pfs-filter-display-type-d{% endif %} {% if show_view_as_m == true or enable_filter_tree_button_desktop == true  %} boost-pfs-filter-display-type-m{% endif %}">
+            {% if enable_filter_tree_button_desktop %}
+              <div class="boost-pfs-filter-tree-desktop-button">{%- render 'boost-pfs-filter-skeleton', type: 'button' -%}</div>
+            {% endif %}
+            {%- if show_view_as == true or show_view_as_m == true -%}
+              <div class="boost-pfs-filter-top-display-type {% if show_view_as == true %} boost-pfs-filter-top-display-type-d{% endif %} {% if show_view_as_m == true %} boost-pfs-filter-top-display-type-m{% endif %}">{%- render 'boost-pfs-filter-skeleton', width: 2 -%}</div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+        
+        {%- if show_product_count == true or show_product_count_m == true -%}
+          <div class="boost-pfs-filter-toolbar-item boost-pfs-filter-toolbar-count {% if show_product_count %} boost-pfs-filter-toolbar-count-d {% endif %} {% if show_product_count_m %} boost-pfs-filter-toolbar-count-m {% endif %}">
+            <span class="boost-pfs-filter-total-product">{%- render 'boost-pfs-filter-skeleton', width: 1 -%}</span>
+          </div>
+        {%- endif -%}
+        
+        {%- if show_sort_by -%}
+          <div class="boost-pfs-filter-toolbar-item boost-pfs-filter-custom-sorting boost-pfs-filter-top-sorting" >{%- render 'boost-pfs-filter-skeleton', width: 1 -%}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+<script>
+    $(document).ready(function() {
+        $(".nutrition-dropdown-toggle").on('click', 
+        function() {
+            
+          if ($(this).siblings(".nutrition-information-extend").hasClass('hide')==true)
+          {
+            $(this).siblings(".nutrition-information-extend").removeClass("hide");
+            
+            
+          }
+          else
+          $(this).siblings(".nutrition-information-extend").addClass("hide");
+          
+        });
+    });
+
+      </script>

@@ -1,0 +1,106 @@
+
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign compare_at_price = current_variant.compare_at_price -%}
+{%- assign price = current_variant.price -%}
+
+{% assign is_new = false %}
+
+{% for tag in product.tags %}
+  {% assign tag_down = tag | downcase %}
+  {% if tag_down == "new" %}
+    {% assign is_new = true %}
+  {% endif %}
+{% endfor %}
+
+{% assign hover_image = '' %}
+{% if product.images.size > 1 %}
+  {% assign hover_image = product.images[1] %}
+{% endif %}
+
+
+<div class="product-section-flex-col {{col_class}}">
+  <div class="product-section-flex-col-inner">
+
+    <div>
+
+        <div class="product-card-img-wrapper">
+          <a href="{{product.url}}" class="product-card-img-link product-card-img-link-cover w-inline-block">
+            <img src="{{ product.featured_image | img_url: '800x' }}" loading="lazy" alt="{{product.title}}" class="product-card-img">
+            {% unless hover_image == blank %}
+              <img src="{{ hover_image | img_url: '800x' }}" loading="lazy" alt="{{product.title}}" class="product-card-img-hover">
+            {% endunless %} 
+          </a>
+          <div class="product-card-favorite-wrapper">
+             {% comment %}
+            <img src="//cdn.shopify.com/s/files/1/2012/6591/files/like1-min-sk-update.png" loading="lazy" alt="Heart" class="product-card-favorite-img">
+           {% endcomment %}
+            {% render 'ZooomyListWishlistColl', product: product %}
+          </div>
+          {% if is_new == true %}
+            <div class="product-card-tag">New</div>
+          {% endif %}
+        </div>
+        <div class="product-card-heading-wrapper">
+          <h4 class="product-card-heading"><a href="{{product.url}}">{{product.title}}</a></h4>
+        </div>
+        <div class="product-card-price-wrapper">
+          <div class="product-card-price-flex-row">
+            {% if compare_at_price > price  %}  
+              <div class="product-card-price-text">
+                <span style="text-decoration: line-through">{{compare_at_price | money }}</span> <span>{{ price | money }}</span>
+              </div>
+              {% else %}
+              <div class="product-card-price-text">{{ price | money }}</div>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="product-card-review-wrapper">
+
+           <div class="review-preview">
+             <div class="trustspot-inline-category" data-product-sku="{{ product.id }}"></div>
+          </div>
+
+        </div>
+
+    </div> <!-- empty div -->
+
+    {% form "product", product %}
+
+      {% assign is_available = product.available %}
+
+      {% if is_available == true %}
+          {% assign cart_btn_text = 'Add To Cart' %}
+          {% assign cart_disabled = '' %}
+        {% else %}
+          {% assign cart_btn_text = 'Sold Out' %}
+          {% assign cart_disabled = 'disabled="disabled"' %}
+      {% endif %}
+      <input type="number" class="form-quantity-input-product w-input" maxlength="256" name="quantity" value="1" min="1" pattern="[0-9]*" id="Quantity" required="" style="display: none;">
+      <select aria-label="Select Variant" name="id" class="jc-product-input-hide" style="display: none;">
+        {% for variant in product.variants %}
+          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %}  value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+        {% endfor %}
+      </select>
+
+      <div class="product-card-btn-section">
+        <div class="product-card-btn-flex-row">
+          <div class="product-card-btn-flex-col">
+            <a href="{{product.url}}" class="product-card-btn w-button">Shop Now</a>
+          </div>
+          <div class="product-card-btn-flex-col">
+            <input class="product-card-btn-alt w-button" type="submit" value="{{cart_btn_text}}" {{cart_disabled}} />
+          </div>
+        </div>
+      </div>
+
+    {% endform %}  
+
+    
+
+  </div>
+</div>
+
+
+
+

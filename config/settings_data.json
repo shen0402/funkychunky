@@ -1,0 +1,831 @@
+{
+  "current": {
+    "color_text": "#3d4246",
+    "color_body_text": "#69727b",
+    "color_sale_text": "#557B97",
+    "color_button": "#557B97",
+    "color_button_text": "#fff",
+    "color_small_button_text_border": "#3d4246",
+    "color_text_field_text": "#000",
+    "color_text_field_border": "#949494",
+    "color_text_field": "#fff",
+    "color_image_overlay_text": "#fff",
+    "color_image_overlay": "#3d4246",
+    "image_overlay_opacity": 40,
+    "color_borders": "#e8e9eb",
+    "color_body_bg": "#fff",
+    "type_header_font": "work_sans_n6",
+    "type_header_base_size": 26,
+    "type_base_font": "work_sans_n4",
+    "type_base_size": 16,
+    "type_bold_product_titles": false,
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "favicon": "shopify:\/\/shop_images\/62e40554ba407f71a80b7166_fc-favicon-256.png",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+        }
+      },
+      "hero": {
+        "type": "hero",
+        "settings": {
+          "text_size": "large"
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "slideshow-0": {
+            "type": "image",
+            "settings": {
+            }
+          },
+          "slideshow-1": {
+            "type": "image",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "slideshow-0",
+          "slideshow-1"
+        ],
+        "settings": {
+        }
+      },
+      "featured-collections": {
+        "type": "collection",
+        "settings": {
+          "collection": "frontpage"
+        }
+      },
+      "feature-row": {
+        "type": "feature-row",
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "link_list": {
+            "type": "link_list",
+            "settings": {
+            }
+          },
+          "text": {
+            "type": "text",
+            "settings": {
+            }
+          },
+          "newsletter": {
+            "type": "newsletter",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "link_list",
+          "text",
+          "newsletter"
+        ],
+        "settings": {
+        }
+      },
+      "sk-navigation": {
+        "type": "sk-navigation",
+        "settings": {
+          "announcement_link": "https:\/\/funkychunky.com\/pages\/discounts",
+          "announcement_text": "Save 15% off MOTHER'S DAY ORDERS OVER $50 with code MOM15",
+          "announcement_text_color": "#ff45af",
+          "announcement_color": "#211e1e",
+          "btn_url": "https:\/\/funkychunky.com\/pages\/discounts",
+          "btn_text": "FREE SHIPPING on Orders Over $75",
+          "btn_url_2": "shopify:\/\/collections\/buy-with-prime",
+          "btn_text_2": "BUY WITH PRIME - FREE 2-DAY DELIVERY"
+        }
+      },
+      "home-hero-section": {
+        "type": "home-hero-section",
+        "blocks": {
+          "20229b62-1d9a-4c99-b9a4-3c7bfcf4087d": {
+            "type": "text",
+            "settings": {
+              "title": "tasting-kit"
+            }
+          },
+          "ca663994-b2bf-45a9-a0e4-6d6805f6be58": {
+            "type": "text",
+            "settings": {
+              "title": "salty-sweet-duo-ssc-ncp"
+            }
+          },
+          "568b1f74-47eb-4bcf-83d1-1be0703d18c8": {
+            "type": "text",
+            "settings": {
+              "title": "gift-pails"
+            }
+          },
+          "60ed73c7-da36-430c-ba6e-755c0e7b4b42": {
+            "type": "text",
+            "settings": {
+              "title": "premier-gift-pack"
+            }
+          },
+          "172bc2c5-9409-409d-8102-45de4e563f66": {
+            "type": "text",
+            "settings": {
+              "title": "large-bag-snack-box"
+            }
+          },
+          "7b330a43-7a7f-4fbb-a27d-02aecfafa482": {
+            "type": "text",
+            "settings": {
+              "title": "double-mini-gift-pack"
+            }
+          },
+          "42fbcdd8-68f6-495e-bff5-dcba0a9ed624": {
+            "type": "text",
+            "settings": {
+              "title": "chip-zel-pop-tall-canister"
+            }
+          },
+          "48a95c33-f74a-41b9-a7a2-770e46637b2a": {
+            "type": "text",
+            "settings": {
+              "title": "nutty-choco-pop-small-bag"
+            }
+          },
+          "8b4049e4-b133-499f-8486-cd7de559bf85": {
+            "type": "text",
+            "settings": {
+              "title": "large-bags"
+            }
+          },
+          "1c397921-7df7-4218-80d7-1cd15b654d10": {
+            "type": "text",
+            "settings": {
+              "title": "birthday-cake-popcorn-2lb-party-pail"
+            }
+          },
+          "994fff9d-4b18-4764-922f-14e765a3dff3": {
+            "type": "text",
+            "settings": {
+              "title": "four-flavor-gift-pack"
+            }
+          },
+          "9eae66be-6a71-4c58-a206-3f6f1f4834b9": {
+            "type": "text",
+            "settings": {
+              "title": "deluxe-gourmet"
+            }
+          }
+        },
+        "block_order": [
+          "20229b62-1d9a-4c99-b9a4-3c7bfcf4087d",
+          "ca663994-b2bf-45a9-a0e4-6d6805f6be58",
+          "568b1f74-47eb-4bcf-83d1-1be0703d18c8",
+          "60ed73c7-da36-430c-ba6e-755c0e7b4b42",
+          "172bc2c5-9409-409d-8102-45de4e563f66",
+          "7b330a43-7a7f-4fbb-a27d-02aecfafa482",
+          "42fbcdd8-68f6-495e-bff5-dcba0a9ed624",
+          "48a95c33-f74a-41b9-a7a2-770e46637b2a",
+          "8b4049e4-b133-499f-8486-cd7de559bf85",
+          "1c397921-7df7-4218-80d7-1cd15b654d10",
+          "994fff9d-4b18-4764-922f-14e765a3dff3",
+          "9eae66be-6a71-4c58-a206-3f6f1f4834b9"
+        ],
+        "settings": {
+          "sub_heading": "Shop Mother's Day gifts and save 15% off orders over $50 with code MOM15.",
+          "sub_heading_color": "#000000",
+          "main_heading": "Treat mom to something as sweet as she is!",
+          "main_heading_color": "#ff45af",
+          "btn_text": "SHOP GIFTS",
+          "btn_url": "shopify:\/\/collections\/all",
+          "btn_bg_color": "#ffffff",
+          "btn_text_color": "#000000",
+          "hero_image": "shopify:\/\/shop_images\/JV_Edit_1.png",
+          "mobile_bg_image": "shopify:\/\/shop_images\/JV_Edit_1_copy_5.png",
+          "section_heading": "Check Out Our Best Sellers",
+          "product_limit": 4
+        }
+      },
+      "general-black-back": {
+        "type": "general-black-back",
+        "settings": {
+        }
+      },
+      "reviews-home-section": {
+        "type": "reviews-home-section",
+        "settings": {
+        }
+      },
+      "home-cta-section": {
+        "type": "home-cta-section",
+        "settings": {
+        }
+      },
+      "sk-footer": {
+        "type": "sk-footer",
+        "settings": {
+        }
+      },
+      "sk-search-modal": {
+        "type": "sk-search-modal",
+        "settings": {
+        }
+      },
+      "nutrition-product-section": {
+        "type": "nutrition-product-section",
+        "settings": {
+          "product_img_1": "shopify:\/\/shop_images\/CP-top-min.jpg",
+          "product_heading_1": "CHOCOLATE PRETZEL",
+          "product_ingredients_1": "Milk, Dark & White Chocolatey Drizzle | Pretzels | Caramel | Pecans",
+          "product_description_1": "Crunchy, salty pretzels laced with chewy, gooey caramel and a ton of chocolatey decadence make our Chocolate Pretzel mix so outright irresistible!",
+          "nutrition_img_1": "shopify:\/\/shop_images\/chocolate-pretzel-funky-chunky-nutrition-facts-min_a9420b56-38f3-4538-bd10-bb5f47bc9337.png",
+          "nutrition_text_1": "<p><strong>Milk, Dark & White Chocolatey Drizzle <\/strong>(Sugar, Palm Kernel and Palm Oil, Cocoa Powder, Nonfat Dry Milk, Whey Powder, Soy Lecithin, Salt, Natural Flavor, Milk Solids), <strong>Pretzels <\/strong>(Enriched Flour [Wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid], Water, Canola Oil, Salt, Malt [Tapioca Syrup, Malt Extract], Yeast, Baking Soda), <strong>Caramel <\/strong>(Corn Syrup, Sweetened Condensed Milk [Milk, Sugar], Sugar, Palm Oil, Water, Butter [Cream, Salt], Salt, Vanilla Extract, Soy Lecithin), <strong>Pecans <\/strong>(Roasted in Sunflower Oil, Sea Salt). <\/p><p><strong>Contains: Milk, Soy, Wheat, Pecans. <\/strong><\/p><p><strong>Manufactured in a facility that uses: Peanuts & other Tree Nuts.<\/strong><\/p>",
+          "product_heading_2": "SEA SALT CARAMEL",
+          "product_ingredients_2": "Milk & Dark Chocolatey Drizzle | Caramel Corn | Caramel | Cashews | Sea Salt",
+          "product_description_2": "The salty-sweet popcorn treat you’ll crave. We start with delicious caramel popcorn made with real butter and brown sugar.",
+          "nutrition_img_2": "shopify:\/\/shop_images\/sea-salt-caramel-funky-chunky-nutrition-facts-min_3b50654e-fa17-4615-bb14-14206cd92187.png",
+          "nutrition_text_2": "<p><strong>Milk & Dark Chocolatey Drizzle <\/strong>(Sugar, Palm Kernel and Palm Oil, Cocoa Powder, Nonfat Dry Milk, Soy Lecithin, Salt, Natural Flavor, Milk Solids), <strong>Caramel Corn <\/strong>(Sugar, Popcorn, Corn Syrup, Corn Oil, Water, Butter [Cream, Salt], Brown Sugar, Soy Lecithin, Salt, Natural Flavor), <strong>Caramel <\/strong>(Corn Syrup, Sweetened Condensed Milk [Milk, Sugar], Sugar, Palm Oil, Water, Butter [Cream, Salt], Salt, Vanilla Extract, Soy Lecithin), <strong>Cashews <\/strong>(Roasted in Sunflower Oil, Sea Salt), <strong>Sea Salt<\/strong>. <\/p><p><strong>Contains: Milk, Soy, Cashews. <\/strong><\/p><p><strong>Manufactured in a facility that uses: Milk, Soy, Wheat, Peanuts & Tree Nuts.<\/strong><\/p>",
+          "product_heading_3": "PEANUT BUTTER CUP",
+          "product_ingredients_3": "Caramel Corn | Peanut Butter Drizzle | Milk Chocolate Drizzle | Mini Peanut Butter Cups | Peanuts",
+          "product_description_3": "Turn on your tongue with this serious popcorn mix. The combination of peanut butter and chocolate is an obvious heartbreaker, but we amped up that delight with swirls of peanut buttery and milk chocolatey drizzle.",
+          "nutrition_img_3": "shopify:\/\/shop_images\/peanut-butter-cup-funky-chunky-nutrition-facts-min_a7185254-1873-48cc-ab04-d0a8025bae12.png",
+          "nutrition_text_3": "<p><strong>Caramel Corn <\/strong>(Sugar, Popcorn, Corn Syrup, Corn Oil, Water, Butter [Cream, Salt], Brown Sugar, Soy Lecithin, Salt, Natural Flavor), <strong>Peanut Buttery Drizzle <\/strong>(Sugar, Palm Kernel Oil, Partially Defatted Peanut Flour, Nonfat Dry Milk, Peanut Oil, Salt, Soy Lecithin), <strong>Milk Chocolatey Drizzle <\/strong>(Sugar, Palm Kernel and Palm Oil, Nonfat Dry Milk, Cocoa Powder, Soy Lecithin, Salt, Natural Flavor), <strong>Mini Peanut Butter Cups <\/strong>(Milk Chocolate [Sugar, Cocoa Butter, Chocolate, Milk, Soy Lecithin, Natural Flavor], Sugar, Partially Defatted Peanut Flour, Nonfat Milk, Peanut Butter [Peanuts, Salt], Salt, Soy Lecithin), <strong>Peanuts <\/strong>(Roasted in Sunflower Oil, Sea Salt). <\/p><p><strong>Contains: Milk, Soy, Peanuts. <\/strong><\/p><p><strong>Manufactured in a facility that uses: Milk, Soy, Wheat, Peanuts & Tree Nuts.<\/strong><\/p>",
+          "product_heading_4": "CHIP ZEL POP",
+          "product_ingredients_4": "Milk, Dark & White Chocolatey Drizzle | Caramel Corn | Potato Chips | Pretzel Sticks | Caramel",
+          "product_description_4": "We've created a safe word for your midnight cravings: Chip Zel Pop. The satisfying bite of salty chips and pretzels is the classic go-to snack.",
+          "nutrition_img_4": "shopify:\/\/shop_images\/chip-zel-pop-funky-chunky-nutrition-facts-min_962c2e94-2493-4d53-865e-565d79349af2.png",
+          "nutrition_text_4": "<p><strong>Milk, Dark & White Chocolatey Drizzle <\/strong>(Sugar, Palm Kernel and Palm Oil, Cocoa Powder, Nonfat Dry Milk, Whey Powder, Soy Lecithin, Salt, Natural Flavor, Milk Solids), <strong>Caramel Corn <\/strong>(Sugar, Popcorn, Corn Syrup, Corn Oil, Water, Butter [Cream, Salt], Brown Sugar, Soy Lecithin, Salt, Natural Flavor), <strong>Potato Chips <\/strong>(Potatoes, Canola and\/or Sunflower Oil, Salt), <strong>Pretzel Sticks <\/strong>(Enriched Wheat Flour [Wheat Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid], Salt, Vegetable Oil [Corn, Canola, Cottonseed and\/or Soybean Oil], Corn Syrup, Yeast), <strong>Caramel <\/strong>(Corn Syrup, Sweetened Condensed Milk [Milk, Sugar], Sugar, Palm Oil, Water, Butter [Cream, Salt], Salt, Vanilla Extract, Soy Lecithin). <\/p><p><strong>Contains: Milk, Soy, Wheat. <\/strong><\/p><p><strong>Manufactured in a facility that uses: Milk, Soy, Wheat, Peanuts & Tree Nuts.<\/strong><\/p>",
+          "product_heading_5": "NUTTY CHOCO POP",
+          "product_ingredients_5": "Milk, Dark & White Chocolatey Drizzle | Caramel Corn | Glazed Almonds | Glazed Cashews",
+          "product_description_5": "When our signature caramel popcorn was wed to mixed nuts we sealed the coupling with a trio of chocolatey drizzle.",
+          "nutrition_img_5": "shopify:\/\/shop_images\/nutty-choco-pop-funky-chunky-nutrition-facts-min_4ecff02d-c0f2-4149-b62e-0e41f9957e4a.png",
+          "nutrition_text_5": "<p><strong>Milk, Dark & White Chocolatey Drizzle <\/strong>(Sugar, Palm Kernel and Palm Oil, Cocoa Powder, Nonfat Dry Milk, Whey Powder, Soy Lecithin, Salt, Natural Flavor, Milk Solids), <strong>Caramel Corn <\/strong>(Sugar, Corn Syrup, Butter [Cream, Salt], Popcorn, Vanilla Extract, Salt, Soy Lecithin), <strong>Glazed Almonds <\/strong>(Sugar, Vanilla Extract, Salt), <strong>Glazed Cashews <\/strong>(Corn Syrup, Sugar). <\/p><p><strong>Allergen Statement:<\/strong><\/p><p><strong>Contains: Milk, Soy, Almonds, Cashews. <\/strong><\/p><p><strong>Manufactured in a facility that uses: Milk, Soy, Wheat, Peanuts & Tree Nuts.<\/strong><\/p>",
+          "product_img_6": "shopify:\/\/shop_images\/flavor-birthdaycake-min_26117913-ff9f-44a1-af2e-7d967989f826.jpg",
+          "product_heading_6": "BIRTHDAY CAKE",
+          "product_ingredients_6": "White Chocolate Drizzle | Caramel Corn | Rainbow Non-Pareils | Vanilla Cream | Natural Flavors",
+          "product_description_6": "This celebratory Birthday Cake Flavored Popcorn is swirled with white chocolatey frosting and coated with vanilla cream.",
+          "nutrition_img_6": "shopify:\/\/shop_images\/birthday-cake-caramel-corn-funky-chunky-nutrition-facts-min_86aee8c5-78b1-4a67-a837-f232ca0add62.png",
+          "nutrition_text_6": "<p><strong>Note: “Servings per Container” equals number of ounces in the container’s net weight. (Whole Number)  <\/strong><\/p><p><strong>INGREDIENTS: White Chocolatey Drizzle <\/strong>(Sugar, Palm Kernel and Palm Oil, Whey Powder, Nonfat Dry  Milk Solids, Soy Lecithin, Salt, Natural Flavor), <strong>Caramel Corn <\/strong>(Sugar, Corn Syrup, Butter [Cream, Salt],  Popcorn, Vanilla Extract, Salt, Soy Lecithin), <strong>Rainbow Non-Pareils <\/strong>(Sugar, Corn Starch, Candy Colors (Red  40, Red 3, Yellow 5, Yellow 6, Blue 1), Carnauba Wax), <strong>Natural Flavors <\/strong>(Annatto & Turmeric [for color])<strong>,  Vanilla Cream <\/strong>(Cream, Natural Flavor). <\/p><p><strong>Contains: Milk, Soy. <\/strong><\/p><p><strong>Manufactured in a facility that uses: Milk, Soy, Wheat, Peanuts & Tree Nuts.<\/strong><\/p>",
+          "product_img_7": "shopify:\/\/shop_images\/VSC-top-min.jpg",
+          "product_heading_7": "VANILLA SWEET CRÈME",
+          "product_ingredients_7": "Caramel Corn | White Chocolatey Drizzle | Caramel | Cappuccino White Espresso Beans | Natural Coffee Flavor | Natural Flavor",
+          "product_description_7": "Upgrade your sweet tooth. We start with our decadent, buttery caramel popcorn and then drizzle vanilla sweet crème white chocolatey goodness, chewy caramel, and a sprinkle of white chocolate covered espresso beans.",
+          "nutrition_img_7": "shopify:\/\/shop_images\/vanilla-sweet-cream-funky-chunky-nutrition-facts-min_df2c5ad2-12db-4a26-aca5-04c69195c8c2.png",
+          "nutrition_text_7": "<p><strong>Note: “Servings per Container” equals number of ounces in the container’s net weight. (Whole Number) <\/strong><\/p><p>INGREDIENTS:  <strong>Caramel Corn<\/strong> (Sugar, Popcorn, Corn Syrup, Corn Oil, Water, Butter [Cream, Salt], Brown Sugar, Soy Lecithin, Salt, Natural Flavoring, Peanut Oil, Almond Oil), <strong>White Chocolatey<\/strong> <strong>Drizzle<\/strong> (Sugar, Palm Kernel and Palm Oil, Whey Powder, Nonfat Dry Milk, Soy Lecithin, Salt, Natural Flavor), <strong>Caramel<\/strong> (Corn Syrup, Sweetened Condensed Milk [Milk, Sugar], Sugar, Palm Oil, Water, Butter [Cream, Salt], Salt, Vanilla Extract, Soy Lecithin), <strong>Cappuccino<\/strong> <strong>White<\/strong> <strong>Espresso Beans<\/strong> (White Chocolate [Sugar, Whole Milk Powder, Cocoa Butter, Soy Lecithin, Vanilla], Dark Chocolate [Sugar, Cocoa, Cocoa Butter, Soy Lecithin, Vanilla], Roasted Arabica Coffee Beans, Cocoa Powder, Confectioner's Glaze, Gum Arabic, Natural Flavors), <strong>Natural<\/strong> <strong>Coffee Flavor<\/strong>, <strong>Natural Flavor.<\/strong>\t<\/p><p><strong>Contains:  Milk, Soy, Peanuts and Almonds<\/strong><\/p><p><strong>Manufactured in a facility that uses:  Milk, Soy, Wheat, Peanuts & Tree Nuts.<\/strong><\/p>",
+          "product_img_8": "shopify:\/\/shop_images\/CL-top-min.jpg",
+          "product_heading_8": "CARAMEL LATTE",
+          "product_ingredients_8": "Caramel Corn | Milk & White Chocolatey Drizzle | Caramel | Chocolate Espresso Beans | Natural Coffee Flavor",
+          "product_description_8": "We start with our decadent buttery caramel corn, then drizzle this caramel latte treat with white and milk chocolatey goodness and a sprinkle of dark chocolate covered espresso beans.",
+          "nutrition_img_8": "shopify:\/\/shop_images\/caramel-latte-funky-chunky-nutrition-facts-min_f8e2ee50-9830-4697-a1db-b4bb76874c78.png",
+          "nutrition_text_8": "<p><strong>Note: “Servings per Container” equals number of ounces in the container’s net weight. (Whole Number) <\/strong><\/p><p>INGREDIENTS<strong> Caramel Corn<\/strong> (Sugar, Popcorn, Corn Syrup, Corn Oil, Water, Butter [Cream, Salt], Brown Sugar, Soy Lecithin, Salt, Natural Flavor), <strong>Milk & White Chocolatey<\/strong> <strong>Drizzle<\/strong> (Sugar, Palm Kernel and Palm Oil, Nonfat Dry Milk, Whey Powder, Cocoa Powder, Soy Lecithin, Salt, Natural Flavor), <strong>Caramel<\/strong> (Corn Syrup, Sweetened Condensed Milk [Milk, Sugar], Sugar, Palm Oil, Water, Butter [Cream, Salt], Salt, Vanilla Extract, Soy Lecithin), <strong>Chocolate<\/strong> <strong>Espresso Beans<\/strong> (Dark Chocolate [Sugar, Cocoa, Cocoa Butter, Soy Lecithin, Vanilla], Roasted Arabica Coffee Beans, Cocoa Powder, Confectioner's Glaze, Gum Arabic), <strong>Natural<\/strong> <strong>Coffee Flavor<\/strong>.\t<\/p><p><strong>Contains:  Milk, Soy, Peanuts and Almonds<\/strong><\/p><p><strong>Manufactured in a facility that uses:  Milk, Soy, Wheat, Peanuts & Tree Nuts.<\/strong><\/p>",
+          "product_img_9": "shopify:\/\/shop_images\/DCM-top-min.jpg",
+          "product_heading_9": "DARK CHOCOLATE MOCHA",
+          "product_ingredients_9": "Dark & Milk Chocolatey Drizzle | Caramel Corn | Caramel | Chocolate Espresso Beans | Natural Coffee Flavor",
+          "product_description_9": "We start with our decadent, buttery caramel corn, add dark and milk chocolatey mocha goodness, chewy caramel, and then top it all off with a sprinkle of dark chocolate covered espresso beans.",
+          "nutrition_img_9": "shopify:\/\/shop_images\/dark-chocolate-mocha-funky-chunky-nutrition-facts-min_454315d8-78e1-4104-ba81-714b98efa4bb.png",
+          "nutrition_text_9": "<p><strong>Note: “Servings per Container” equals number of ounces in the container’s net weight. (Whole Number) <\/strong><\/p><p>INGREDIENTS:  <strong>Dark & Milk Chocolatey<\/strong> <strong>Drizzle<\/strong> (Sugar, Palm Kernel and Palm Oil, Cocoa Powder, Nonfat Dry Milk, Soy Lecithin, Salt, Natural Flavor, Whole Milk Solids), <strong>Caramel Corn<\/strong> (Sugar, Popcorn, Corn Syrup, Corn Oil, Water, Butter [Cream, Salt], Brown Sugar, Soy Lecithin, Salt, Natural Flavoring, Peanut Oil, Almond Oil), <strong>Caramel<\/strong> (Corn Syrup, Sweetened Condensed Milk [Milk, Sugar], Sugar, Palm Oil, Water, Butter [Cream, Salt], Salt, Vanilla Extract, Soy Lecithin), <strong>Chocolate<\/strong> <strong>Espresso Beans<\/strong> (Dark Chocolate [Sugar, Cocoa, Cocoa Butter, Soy Lecithin, Vanilla], Roasted Arabica Coffee Beans, Cocoa Powder, Confectioner's Glaze, Gum Arabic), <strong>Natural<\/strong> <strong>Coffee Flavor<\/strong>.<\/p><p>\t<\/p><p><strong>Contains:  Milk, Soy, Peanuts and Almonds<\/strong><\/p><p><strong>Manufactured in a facility that uses:  Milk, Soy, Wheat, Peanuts & Tree Nuts.<\/strong><\/p>",
+          "product_img_10": "shopify:\/\/shop_images\/PCP-top.jpg",
+          "product_heading_10": "PEPPERMINTY CHOCO POP",
+          "product_ingredients_10": "Dark & White Chocolatey Drizzle | Caramel Corn | Peppermint Candy | Natural Peppermint Flavor",
+          "product_description_10": "Our famed caramel popcorn is drizzled with white and dark chocolatey goodness then sprinkled with crushed striped peppermint candy for the perfect party indulgence.",
+          "nutrition_img_10": "shopify:\/\/shop_images\/pepperminty-choco-pop-funky-chunky-nutrition-facts-min_1cf2e6c5-6c91-4a19-b8b5-024d33ce399a.png",
+          "nutrition_text_10": "<p><strong>Dark & White Chocolatey Drizzle <\/strong>(Sugar, Palm Kernel and Palm Oil, Cocoa Powder, Nonfat Dry Milk, Whey Powder, Soy Lecithin, Salt, Natural Flavor, Milk Solids), <strong>Caramel Corn <\/strong>(Sugar, Corn Syrup, Butter [Cream, Salt], Popcorn, Vanilla Extract, Salt, Soy Lecithin), <strong>Peppermint Candy <\/strong>(Sugar, Corn Syrup, Peppermint Oil, Red 40)<strong>, Natural Peppermint Flavor. <\/strong><\/p><p><strong>Contains: Milk, Soy. <\/strong><\/p><p><strong>Manufactured in a facility that uses: Milk, Soy, Wheat, Peanuts & Tree Nuts.<\/strong><\/p>",
+          "product_img_11": "shopify:\/\/shop_images\/MCP-top.jpg",
+          "product_heading_11": "MINTY CHOCO POP",
+          "product_ingredients_11": "Dark & White Chocolatey Drizzle | Caramel Corn | Mint Candy | Natural Peppermint Flavor",
+          "product_description_11": "It has all the feels of a pumped-up popcorn: salty caramel popcorn, sinful chocolatey drizzles, and demolished mints.",
+          "nutrition_img_11": "shopify:\/\/shop_images\/pepperminty-choco-pop-funky-chunky-nutrition-facts-min_2f492c06-0f01-43f3-900e-41e7627403ba.png",
+          "nutrition_text_11": "<p><strong>Dark & White Chocolatey Drizzle <\/strong>(Sugar, Palm Kernel and Palm Oil, Cocoa Powder, Nonfat Dry Milk, Whey Powder, Soy Lecithin, Salt, Natural Flavor, Milk Solids), <strong>Caramel Corn <\/strong>(Sugar, Corn Syrup, Butter [Cream, Salt], Popcorn, Vanilla Extract, Salt, Soy Lecithin), <strong>Mint Candy <\/strong>(Sugar, Corn Syrup, Natural Flavor, Red 40, Blue 1, Red 3, Yellow 5)<strong>, Natural Peppermint Flavor. <\/strong><\/p><p><strong>Contains: Milk, Soy. <\/strong><\/p><p><strong>Manufactured in a facility that uses: Milk, Soy, Wheat, Peanuts & Tree Nuts.<\/strong><\/p>"
+        }
+      },
+      "jc-account-page": {
+        "type": "jc-account-page",
+        "settings": {
+        }
+      },
+      "jc-account-login-section": {
+        "type": "jc-account-login-section",
+        "settings": {
+        }
+      },
+      "top-section-hs": {
+        "type": "top-section-hs",
+        "settings": {
+          "sub_heading": "WELCOME HOWARD STERN FANS!",
+          "main_heading": "SHOP FUNKY CHUNKY"
+        }
+      },
+      "top-section-fb": {
+        "type": "top-section-fb",
+        "settings": {
+          "sub_heading": "THANKS FOr visiting!",
+          "main_heading": "WELCOME TO FUNKY CHUNKY"
+        }
+      },
+      "sk-modal": {
+        "type": "sk-modal",
+        "settings": {
+        }
+      },
+      "sk-white-box-section-discount": {
+        "type": "sk-white-box-section-discount",
+        "settings": {
+          "main_heading": "CURRENT PROMOTIONS",
+          "sub_heading": "ORDERS OVER $75",
+          "main_box_heading": "FREE SHIPPING",
+          "body": "Online Only. To receive free shipping discount, cart subtotal must exceed $75 AFTER all other promotions are applied. Total must be per address. No code needed.",
+          "btn_url": "https:\/\/funkychunky.com\/collections\/best-selling-products",
+          "btn_text": "SHOP NOW",
+          "sub_heading_2": "SAVE 15% off orders over $50",
+          "main_box_heading_2": "MOTHERS DAY PROMO",
+          "body_2": "Online Only. Must enter code MOM15 in the MY Cart or Checkout Page to receive discount. Applies to cost of product only, does not apply to shipping. To receive discount, cart subtotal must exceed $50 before shipping.",
+          "btn_url_2": "https:\/\/funkychunky.com\/collections\/best-selling-products",
+          "btn_text_2": "SHOP NOW"
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_ajax_enable": true,
+          "cart_notes_enable": true
+        }
+      },
+      "jc-collection-section": {
+        "type": "jc-collection-section",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+      "hero",
+      "featured-collections",
+      "feature-row",
+      "slideshow"
+    ],
+    "blocks": {
+      "14060646107696862457": {
+        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "319724205969189013": {
+        "type": "shopify:\/\/apps\/hulk-form-builder\/blocks\/app-embed\/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "942670587456160541": {
+        "type": "shopify:\/\/apps\/discount-ninja\/blocks\/discountninja-app-embed-stable\/b9a933ba-e276-459f-a4bf-3571d5a1e81c",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "14417550493701535262": {
+        "type": "shopify:\/\/apps\/discount-ninja\/blocks\/discountninja-app-embed-latest\/b9a933ba-e276-459f-a4bf-3571d5a1e81c",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "12120936241911852800": {
+        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/reviews_tab\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": true,
+        "settings": {
+          "position": "right"
+        }
+      },
+      "12046557757412368804": {
+        "type": "shopify:\/\/apps\/customer-account-concierge\/blocks\/customer_account_page\/3c495b68-652c-468d-a0ef-5bad6935d104",
+        "disabled": false,
+        "settings": {
+          "style": "light",
+          "dropdownMenu": "slider",
+          "mobile_nav_offset_top": 0,
+          "shadow": true,
+          "border_radius": 4,
+          "background_color": "#ffffff",
+          "text_color": "#202202",
+          "primary_color": "#5873F9",
+          "btn_text_color": "#ffffff",
+          "max_width": 800,
+          "custom_css": ""
+        }
+      },
+      "6471712195879653093": {
+        "type": "shopify:\/\/apps\/customer-account-concierge\/blocks\/social_logins\/3c495b68-652c-468d-a0ef-5bad6935d104",
+        "disabled": false,
+        "settings": {
+          "position": "below",
+          "divider": true,
+          "style": "icon_and_text",
+          "text_alignment": "center",
+          "icon_alignment": "left",
+          "icon_style": "white",
+          "border_radius": 4,
+          "spacing": 8,
+          "shadow": true,
+          "custom_css": ""
+        }
+      },
+      "11074193060611426105": {
+        "type": "shopify:\/\/apps\/customer-account-concierge\/blocks\/product_wishlist\/3c495b68-652c-468d-a0ef-5bad6935d104",
+        "disabled": false,
+        "settings": {
+          "placement": "below_add_to_cart",
+          "product_css_selector": "",
+          "button_style": "icon_and_text",
+          "border_radius": 4,
+          "shadow": true,
+          "offset_top": 0,
+          "offset_bottom": 0,
+          "offset_left": 0,
+          "offset_right": 0,
+          "collections_wishlist_button": "none",
+          "collection_button_border_radius": 50,
+          "floating_link_placement": "left",
+          "floating_link_vertical_offset": 0,
+          "floating_link_lateral_offset": 0,
+          "floating_link_border_radius": 4,
+          "navigation_link": false,
+          "navigation_link_css_selector": "",
+          "add_button_color": "#000000",
+          "add_button_text_color": "#ffffff",
+          "remove_button_color": "#333333",
+          "remove_button_text_color": "#ffffff",
+          "custom_css": ""
+        }
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "color_text": "#3d4246",
+      "color_body_text": "#69727b",
+      "color_sale_text": "#557B97",
+      "color_borders": "#e8e9eb",
+      "color_button": "#557B97",
+      "color_button_text": "#fff",
+      "color_small_button_text_border": "#3d4246",
+      "color_text_field": "#fff",
+      "color_text_field_text": "#000",
+      "color_text_field_border": "#949494",
+      "color_image_overlay_text": "#fff",
+      "color_image_overlay": "#3d4246",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#fff",
+      "type_header_font": "work_sans_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "work_sans_n4",
+      "type_base_size": 16,
+      "type_bold_product_titles": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+              }
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {
+          }
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text",
+            "newsletter"
+          ],
+          "settings": {
+          }
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "feature-row",
+        "slideshow"
+      ]
+    },
+    "Light": {
+      "color_text": "#162950",
+      "color_body_text": "#6d6d6d",
+      "color_sale_text": "#DA2F0C",
+      "color_borders": "#e4e4e4",
+      "color_button": "#DA2F0C",
+      "color_button_text": "#ffffff",
+      "color_small_button_text_border": "#162950",
+      "color_text_field": "#ffffff",
+      "color_text_field_text": "#162950",
+      "color_text_field_border": "#909090",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#3d3d3d",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#f8f8f8",
+      "type_header_font": "muli_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "muli_n4",
+      "type_base_size": 18,
+      "type_bold_product_titles": true,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#e8f3f6",
+      "checkout_heading_font": "Roboto",
+      "checkout_body_font": "Source Sans Pro",
+      "checkout_accent_color": "#1990c6",
+      "checkout_button_color": "#23314e",
+      "checkout_error_color": "#ff6d6d",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "align_logo": "left",
+            "logo": "",
+            "logo_max_width": 135,
+            "main_linklist": "main-menu",
+            "message": true,
+            "color_bg": "#162950",
+            "color_text": "#ffffff"
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "alignment": "center",
+            "hero_size": "x-large",
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center center"
+              }
+            },
+            "1492095993817": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "1492095993817"
+          ],
+          "settings": {
+            "slideshow_height": "medium",
+            "text_size": "medium",
+            "autorotate": false,
+            "autorotate_speed": 5
+          }
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "grid": 3,
+            "rows": 1,
+            "show_vendor": true,
+            "show_view_all": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "image_size": "medium",
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": false,
+            "enable_zoom": true,
+            "show_share_buttons": true
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "layout": "grid",
+            "grid": 2,
+            "rows": 2,
+            "show_collection_image": true,
+            "show_vendor": false,
+            "sort_enable": true,
+            "tags_enable": true
+          }
+        },
+        "1492033809691": {
+          "type": "map",
+          "settings": {
+          }
+        },
+        "1492033877875": {
+          "type": "quotes",
+          "blocks": {
+            "1492033877875-0": {
+              "type": "quote",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1492033877875-0"
+          ],
+          "settings": {
+          }
+        },
+        "1492033924902": {
+          "type": "custom-content",
+          "blocks": {
+            "1492033924902-0": {
+              "type": "text",
+              "settings": {
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492033924902-0"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "1492096252560": {
+          "type": "collection-list",
+          "blocks": {
+            "1492096252560-0": {
+              "type": "featured_collection",
+              "settings": {
+              }
+            },
+            "1492096252560-1": {
+              "type": "featured_collection",
+              "settings": {
+              }
+            },
+            "1492096252560-2": {
+              "type": "featured_collection",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1492096252560-0",
+            "1492096252560-1",
+            "1492096252560-2"
+          ],
+          "settings": {
+            "grid": 3
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "grid",
+            "blog_show_author": true,
+            "blog_show_date": false
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_author": true,
+            "blog_show_date": true,
+            "show_share_buttons": true
+          }
+        },
+        "cart-template": {
+          "type": "cart-template",
+          "settings": {
+            "cart_notes_enable": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text",
+            "newsletter"
+          ],
+          "settings": {
+          }
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "slideshow",
+        "1492033924902",
+        "1492096252560",
+        "1492033877875",
+        "1492033809691"
+      ]
+    }
+  }
+}

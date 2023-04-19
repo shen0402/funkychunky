@@ -1,0 +1,76 @@
+{% comment %}
+<div class="" {% if article.image %}style="background-image: url({{ article.image | img_url: '800x' }});"{% endif %}></div>
+{% endcomment %}
+
+<div id="w-node-_8fbbc85c-f730-2ab9-bc51-a1f3f6b53230-59dbcb97" class="white-section">
+  <div class="general-white-front top-flat">
+    <div class="blog-hero">
+      <div class="blog-hero-flex-row">
+        <div class="blog-hero-flex-col">
+          <div class="hero-content-hero-wrapper">
+            <p class="black-text smaller italic-text">{{ article.published_at | time_tag: format: 'date' }}</p>
+            <h1 class="black-text no-margin-b">{{ article.title }}</h1>
+            <p class="black-text smaller italic-text">{{article.author}}</p>
+          </div>
+        </div>
+        <div class="blog-hero-img-wrapper" {% if article.image %}style="background-image: url({{ article.image | img_url: '800x' }});"{% endif %}></div>
+        
+      </div>
+    </div>
+
+    <div class="blog-content-grid">
+      <div id="w-node-ec1b16b3-fa54-a291-6c56-266c63f7c6f9-59dbcb97" class="social-link-grid-blog">
+        <a href="//www.facebook.com/sharer.php?u=https://funkychunky.com/" class="social-blog-icon-wrapper w-inline-block"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/facebook-b.svg?v=1660925360" loading="lazy" alt="Funky Chunky Facebook"></a>
+        <a href="//pinterest.com/pin/create/button/?url=https://funkychunky.com" class="social-blog-icon-wrapper w-inline-block"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/pinterest-b.svg" loading="lazy" alt="Funky Chunky Pinterest"></a>
+        <a href="//twitter.com/share?text=&amp;url=https://funkychunky.com" class="social-blog-icon-wrapper w-inline-block"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/twitter-b.svg?v=1661558139" loading="lazy" alt="Funky Chunky Twitter"></a>
+        <a href="mailto:?body={{ article.url }}" class="social-blog-icon-wrapper w-inline-block"><img src="https://cdn.shopify.com/s/files/1/0007/4524/2681/files/email-b.svg?v=1661558139" loading="lazy" alt="Funky Chunky Mailing"></a>
+     
+      </div>
+
+
+      <div id="w-node-_5a5f988c-1202-031d-b2c4-2f6cfdf3c2eb-59dbcb97">
+      {{ article.content }}
+      </div>
+
+      <a id="w-node-faf82371-71dc-527f-25a1-fcd9ce4f7310-59dbcb97" href="https://funkychunky.com/blogs/news" class="general-btn dark-border w-button">Back To All Blog Articles</a>
+    </div>
+  </div>
+</div>
+<div class="black-back-section relative">
+  <div class="form-fundraiser-wrapper">
+    <h5 class="all-caps white-text">drink the kool-aid</h5>
+    <h1 class="no-margin-b">SIGN UP AND SAVE!</h1>
+    <p>Sign up for the latest Funky Chunky updates, promotions, and new product releases to receive a 15% off funkychunky.com code!</p>
+    
+
+    <div class="form-imbed-wrapper">
+      <div class="form-imbed-container">
+        <div class="klaviyo-form-XGGm8U"></div>
+      </div>
+    </div>
+
+    
+    {%comment%}
+    <div class="signup-form w-form">
+      <form id="wf-form-Sign-up-and-save" name="wf-form-Sign-up-and-save" data-name="Sign up and save" method="get"><input type="email" class="general-text-field w-input" maxlength="256" name="Email-Address" data-name="Email Address" placeholder="Email Address*" id="Email-Address" required="">
+        <div class="flex-form"><input type="text" class="general-text-field flex w-input" maxlength="256" name="First-Name" data-name="First Name" placeholder="First Name*" id="First-Name" required=""><input type="email" class="general-text-field flex w-input" maxlength="256" name="Last-Name" data-name="Last Name" placeholder="Last Name*" id="Last-Name" required=""></div><input type="submit" value="Submit" data-wait="Please wait..." class="general-btn w-button">
+      </form>
+      <div class="w-form-done">
+        <div>Thank you! Your submission has been received!</div>
+      </div>
+      <div class="w-form-fail">
+        <div>Oops! Something went wrong while submitting the form.</div>
+      </div>
+    </div>
+    {%endcomment%}
+
+
+  </div>
+  <div class="absolute-form-discount-img"><img src="images/drizzle-pretz2-min.png" loading="lazy" srcset="images/drizzle-pretz2-min-p-500.png 500w, images/drizzle-pretz2-min-p-800.png 800w, images/drizzle-pretz2-min-p-1080.png 1080w, images/drizzle-pretz2-min.png 1200w" sizes="(max-width: 991px) 25vw, (max-width: 4000px) 30vw, 1200px" alt="" class="img-absolute"></div>
+</div>
+{%comment%}
+mailto:?body={{ article.url }}
+//pinterest.com/pin/create/button/?url=https://funkychunky.com
+//twitter.com/share?text=&amp;url=https://funkychunky.com
+//www.facebook.com/sharer.php?u=https://funkychunky.com
+{%endcomment%}
